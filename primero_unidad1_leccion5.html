@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>CUEDIS</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="Shortcut Icon" type="image/x-icon" href="assets/icons/cuedis.ico" />
+    <script src="js/sweet-alert.min.js"></script>
+    <link rel="stylesheet" href="css/sweet-alert.css">
+    <link rel="stylesheet" href="css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" href="css/timeline.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.2.min.js"><\/script>')</script>
+    <script src="js/modernizr.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/main.js"></script>
+    <script type="text/javascript">
+            var globo;
+            var cant;
+            function cero(){
+                globo =  aleatorio(1,10);
+                cant =  aleatorio(10,100);
+                document.getElementById("cantidad" + globo).value = cant;
+                switch (globo) {
+                    case 1:
+                        mostrar('pro1');
+                        ocultar('pro2');
+                        ocultar('pro3');
+                        ocultar('pro4');
+                        ocultar('pro5');
+                        ocultar('pro6');
+                        ocultar('pro7');
+                        ocultar('pro8');
+                        ocultar('pro9');
+                        ocultar('pro10');
+                        mostrar('respuesta');
+                        return false;
+                        break;
+                    case 2:
+                        ocultar('pro1');
+                        mostrar('pro2');
+                        ocultar('pro3');
+                        ocultar('pro4');
+                        ocultar('pro5');
+                        ocultar('pro6');
+                        ocultar('pro7');
+                        ocultar('pro8');
+                        ocultar('pro9');
+                        ocultar('pro10');
+                        mostrar('respuesta');
+                        return false;
+                        break;
+                    case 3:
+                        ocultar('pro1');
+                        ocultar('pro2');
+                        mostrar('pro3');
+                        ocultar('pro4');
+                        ocultar('pro5');
+                        ocultar('pro6');
+                        ocultar('pro7');
+                        ocultar('pro8');
+                        ocultar('pro9');
+                        ocultar('pro10');
+                        mostrar('respuesta');
+                        return false;
+                        break;
+                    case 4:
+                        ocultar('pro1');
+                        ocultar('pro2');
+                        ocultar('pro3');
+                        mostrar('pro4');
+                        ocultar('pro5');
+                        ocultar('pro6');
+                        ocultar('pro7');
+                        ocultar('pro8');
+                        ocultar('pro9');
+                        ocultar('pro10');
+                        mostrar('respuesta');
+                        return false;
+                        break;
+                    case 5:
+                        ocultar('pro1');
+                        ocultar('pro2');
+                        ocultar('pro3');
+                        ocultar('pro4');
+                        mostrar('pro5');
+                        ocultar('pro6');
+                        ocultar('pro7');
+                        ocultar('pro8');
+                        ocultar('pro9');
+                        ocultar('pro10');
+                        mostrar('respuesta');
+                        return false;
+                        break;
+                    case 6:
+                        ocultar('pro1');
+                        ocultar('pro2');
+                        ocultar('pro3');
+                        ocultar('pro4');
+                        ocultar('pro5');
+                        mostrar('pro6');
+                        ocultar('pro7');
+                        ocultar('pro8');
+                        ocultar('pro9');
+                        ocultar('pro10');
+                        mostrar('respuesta');
+                        return false;
+                        break;
+                    case 7:
+                        ocultar('pro1');
+                        ocultar('pro2');
+                        ocultar('pro3');
+                        ocultar('pro4');
+                        ocultar('pro5');
+                        ocultar('pro6');
+                        mostrar('pro7');
+                        ocultar('pro8');
+                        ocultar('pro9');
+                        ocultar('pro10');
+                        mostrar('respuesta');
+                        return false;
+                        break;
+                    case 8:
+                        ocultar('pro1');
+                        ocultar('pro2');
+                        ocultar('pro3');
+                        ocultar('pro4');
+                        ocultar('pro5');
+                        ocultar('pro6');
+                        ocultar('pro7');
+                        mostrar('pro8');
+                        ocultar('pro9');
+                        ocultar('pro10');
+                        mostrar('respuesta');
+                        return false;
+                        break;
+                    case 9:
+                        ocultar('pro1');
+                        ocultar('pro2');
+                        ocultar('pro3');
+                        ocultar('pro4');
+                        ocultar('pro5');
+                        ocultar('pro6');
+                        ocultar('pro7');
+                        ocultar('pro8');
+                        mostrar('pro9');
+                        ocultar('pro10');
+                        mostrar('respuesta');
+                        return false;
+                        break;
+                    case 10:
+                        ocultar('pro1');
+                        ocultar('pro2');
+                        ocultar('pro3');
+                        ocultar('pro4');
+                        ocultar('pro5');
+                        ocultar('pro6');
+                        ocultar('pro7');
+                        ocultar('pro8');
+                        ocultar('pro9');
+                        mostrar('pro10');
+                        mostrar('respuesta');
+                        return false;
+                        break;
+                }
+            }
+            var contador=0;
+            var correctos = 0;
+            var incorrectos = 0;
+            function calcular() {
+                var total;
+                var dec;
+                var unid;
+                var resultado;
+                total = cant;
+                dec =   parseInt(document.getElementById("decenas").value);
+                unid =  parseInt(document.getElementById("unidades").value);
+                if((dec * 10) + unid == total) {
+                    resultado = "Correcto";
+                    var tr, td, tabla;
+                    tabla = document.getElementById('dataTable');
+                    tr = tabla.insertRow(tabla.rows.length);
+                    td = tr.insertCell(tr.cells.length);
+                    td.innerHTML =  total ;
+                    td = tr.insertCell(tr.cells.length);
+                    td.innerHTML =  dec ;
+                    td = tr.insertCell(tr.cells.length);
+                    td.innerHTML =  unid ;
+                    td = tr.insertCell(tr.cells.length);
+                    td.innerHTML =  resultado ;                     
+                    correcto();
+                    correctos = correctos + 1;
+                    document.getElementById('correcto').value = correctos; 
+                    incorrectos = incorrectos;
+                    document.getElementById('incorrecto').value = incorrectos; 
+                } else {
+                    resultado = "Incorrecto";
+                    var tr, td, tabla;
+                    tabla = document.getElementById('dataTable');
+                    tr = tabla.insertRow(tabla.rows.length);
+                    td = tr.insertCell(tr.cells.length);
+                    td.innerHTML =  total ;
+                    td = tr.insertCell(tr.cells.length);
+                    td.innerHTML =  dec ;
+                    td = tr.insertCell(tr.cells.length);
+                    td.innerHTML =  unid ;
+                    td = tr.insertCell(tr.cells.length);
+                    td.innerHTML =  resultado ; 
+                    incorrecto();
+                    incorrectos = incorrectos + 1;
+                    document.getElementById('incorrecto').value = incorrectos;
+                    correctos = correctos
+                    document.getElementById('correcto').value = correctos; 
+                };      
+                contador++;
+                document.getElementById("totales").value = contador;
+            }
+            function borrar(){
+                document.getElementById("decenas").value = "";
+                document.getElementById("unidades").value = "";
+            }
+            function descargarExcel(){
+                //Creamos un Elemento Temporal en forma de enlace
+                var tmpElemento = document.createElement('a');
+                // obtenemos la información desde el div que lo contiene en el html
+                // Obtenemos la información de la tabla
+                var data_type = 'data:application/vnd.ms-excel';
+                var tabla_div = document.getElementById('dataTable');
+                var tabla_html = tabla_div.outerHTML.replace(/ /g, '%20');
+                tmpElemento.href = data_type + ', ' + tabla_html;
+                //Asignamos el nombre a nuestro EXCEL
+                tmpElemento.download = 'Informe - ' +  document.getElementById("titulo").value + '.xls';
+                // Simulamos el click al elemento creado para descargarlo
+                tmpElemento.click();
+            }
+            descargarExcel();
+function insertar(){
+
+document.getElementById("ejtotales").innerHTML = document.getElementById("totales").value;
+document.getElementById("ejCorrecto").innerHTML = document.getElementById("correcto").value;
+document.getElementById("ejIncorrecto").innerHTML = document.getElementById("incorrecto").value;
+var rendimiento = (parseInt(document.getElementById("correcto").value)/parseInt(document.getElementById("totales").value))*100
+document.getElementById("ejRendimiento").innerHTML =  rendimiento.toFixed() + " %";
+}
+        </script>
+</head>
+<body>
+<div clas="estadoCorrecto" id="estadoCorrecto">
+    <img src="assets/img/felicitaciones.gif" width="100%" style="border-radius: 10px;">
+</div>
+<div clas="estadoIncorrecto" id="estadoIncorrecto">
+    <img src="assets/img/Intentalo.gif" width="100%" style="border-radius: 10px;">
+</div>
+    <div class="navbar-lateral full-reset">
+<div class="visible-xs font-movile-menu mobile-menu-button"></div>
+        <div class="full-reset container-menu-movile custom-scroll-containers">
+            <div class="logo full-reset all-tittles">
+                <i class="visible-xs zmdi zmdi-close pull-left mobile-menu-button" style="line-height: 55px; cursor: pointer; padding: 0 10px; margin-left: 7px;"></i> 
+            </div>
+            <div class="full-reset" style="background-color:#CC66CC; padding: 10px 0; color:#fff;">
+                <figure>
+                    <img src="assets/img/cuedis.png" alt="Biblioteca" class="img-responsive center-box" style="width:55%;">
+                </figure>
+                <p class="text-center" style="padding-top: 15px;">Cuaderno de Ejercicios Digitales</p>
+            </div>
+            <div class="full-reset nav-lateral-list-menu">
+                <ul class="list-unstyled">
+                    <li><a href="index.html"><i class="zmdi zmdi-balance"></i>&nbsp;&nbsp; Inicio</a></li>
+                    <li><a href="cuedis.html"><i class="zmdi zmdi-more"></i>&nbsp;&nbsp; Cuedis</a></li>
+                    <li><a href="primero.html"><i class="zmdi zmdi-plus"></i></i>&nbsp;&nbsp; 1° básico</a></li>
+                    <!--<li><a href="segundo.html"><i class="zmdi zmdi-plus"></i><i class="zmdi zmdi-plus"></i></i>&nbsp;&nbsp; 2° básico</a></li>
+                    <li><a href="tercero.html"><i class="zmdi zmdi-plus"></i><i class="zmdi zmdi-plus"></i><i class="zmdi zmdi-plus"></i></i>&nbsp;&nbsp; 3° básico</a></li>
+                    <li><a href="cuarto.html"><i class="zmdi zmdi-plus"></i><i class="zmdi zmdi-plus"></i><i class="zmdi zmdi-plus"></i><i class="zmdi zmdi-plus"></i></i>&nbsp;&nbsp; 4° básico</a></li>
+                    <li><a href="quinto.html"><i class="zmdi zmdi-plus"></i><i class="zmdi zmdi-plus"></i><i class="zmdi zmdi-plus"></i><i class="zmdi zmdi-plus"></i><i class="zmdi zmdi-plus"></i>&nbsp;&nbsp; 5° básico</a></li>
+                    <li><a href="sexto.html"><i class="zmdi zmdi-plus"></i><i class="zmdi zmdi-plus"></i><i class="zmdi zmdi-plus"></i><i class="zmdi zmdi-plus"></i><i class="zmdi zmdi-plus"></i><i class="zmdi zmdi-plus"></i>&nbsp;&nbsp; 6° básico</a></li>-->
+                    <li><a href="contacto.html"><i class="zmdi zmdi-email zmdi-hc-5x"></i>&nbsp;&nbsp; Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="content-page-container full-reset custom-scroll-containers">
+        <nav class="navbar-user-top full-reset">
+            <ul class="list-unstyled full-reset">
+                <figure>
+                   <img src="assets/img/flomas.png" alt="user-picture" class="img-responsive img-circle center-box">
+                </figure>
+                <li style="color:#fff; cursor:default;">
+                    <span class="all-tittles">Estudiante</span>
+                </li>
+                <li  class="tooltips-general exit-system-button" data-href="index.html" data-placement="bottom" title="Salir del CUEDIS">
+                    <i class="zmdi zmdi-power"></i>
+                </li>
+                <li class="mobile-menu-button visible-xs" style="float: left !important;">
+                    <i class="zmdi zmdi-menu"></i>
+                </li>
+            </ul>
+        </nav>
+        <div class="container">
+            <div class="page-header">
+              <h1 class="all-tittles">Cuaderno de ejercicios digitales<small> | <a href="primero.html">Primero básico</a> | <a href="primero_unidad1.html">Unidad 1</a> | Lección 5</small></h1>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <ul class="nav nav-tabs nav-justified" role="tablist">
+                <li role="presentation" class="active" onclick="nuevo();" ><a href="#statistics" aria-controls="statistics" role="tab" data-toggle="tab">Ejercicio</a></li>
+                <li role="presentation"><a href="#bitacora" aria-controls="bitacora" role="tab" data-toggle="tab">Resultados</a></li>
+                <li role="presentation"><a href="#reports" aria-controls="reports" role="tab" data-toggle="tab">Informe</a></li>
+            </ul>
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade in active" id="statistics">                    
+                    <div class="container-fluid">
+                        <div class="page-header">
+                          <h2 class="all-tittles">Resuelvo problemas con decenas</h2>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <h3 class="text-center all-tittles">Debe resolver problemas con decenas</h3>
+                                <div class="table-responsive">                           
+                            <table border="0" style="margin: auto;text-align:center;width: 100%;">
+                                <tr>
+                                    <td style="width: 100%; padding: 10px;">
+                                        <input type="button" class="boton" onclick="cero();" value="Nuevo">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 100%;">
+                                        <div id="pro1" style="display:none;">
+                                            <p style="font-size: 1.2em;" align="justify">Raquel es profesora de música y tiene <input type="text" style="width: 30px; margin-left: 5px; margin-right: 5px; text-align: center;" id="cantidad1"> flautas para sus estudiantes. ¿Cuántas decenas y unidades sueltas de flautas tiene Raquel?</p>
+                                        </div>
+                                        <div id="pro2" style="display:none;">
+                                            <p style=" font-size: 1.2em;" align="justify">Tamara tiene una colección de <input type="text" style="width: 30px; margin-left: 5px; margin-right: 5px; text-align: center;" id="cantidad2"> autitos de diferentes colores. ¿Cuántas decenas y unidades sueltas de autos tiene Tamara?</p>
+                                        </div>
+                                        <div id="pro3" style="display:none;">
+                                            <p style="font-size: 1.2em;" align="justify">Gaspar trajo <input type="text" style="width: 30px; margin-left: 5px; margin-right: 5px; text-align: center;" id="cantidad3"> panes de canapés para la convivencia. ¿Cuántas decenas y unidades de canapés trajo Gaspar?</p>
+                                        </div>
+                                        <div id="pro4" style="display:none;">
+                                            <p style="font-size: 1.2em;" align="justify">Eduardo colaboró con <input type="text" style="width: 30px; margin-left: 5px; margin-right: 5px; text-align: center;"  id="cantidad4"> bombillas. ¿Cuántas decenas y unidades de bombillas colaboró Eduardo?</p>
+                                        </div>
+                                        <div id="pro5" style="display:none;">
+                                            <p style="font-size: 1.2em;" align="justify">Se confeccionaron <input type="text" style="width: 30px; margin-left: 5px; margin-right: 5px; text-align: center;" id="cantidad5"> tarjetas de invitación. ¿Cuántas decenas y unidades de tarjetas se confeccionaron?</p>
+                                        </div>
+                                        <div id="pro6" style="display:none;">
+                                            <p style="font-size: 1.2em;" align="justify">Amanda colaboró con <input type="text" style="width: 30px; margin-left: 5px; margin-right: 5px; text-align: center;" id="cantidad6"> vasos de cumpleaños. ¿Cuántas decenas y unidades de vasos colaboró Amanda?</p>
+                                        </div>
+                                        <div id="pro7" style="display:none;">
+                                            <p style="font-size: 1.2em;" align="justify">En una fabrica trabajan <input type="text" style="width: 30px; margin-left: 5px; margin-right: 5px; text-align: center;" id="cantidad7"> personas. ¿Cuántas decenas  y unidades de trabajadores trabajan en la fábrica?</p>
+                                        </div>
+                                        <div id="pro8" style="display:none;">
+                                            <p style="font-size: 1.2em;" align="justify">Magdalena llevó al colegio <input type="text" style="width: 30px; margin-left: 5px; margin-right: 5px; text-align: center;" id="cantidad8"> caramelos ¿Cuántas decenas y unidades sueltas de caramelos llevó Magdalena al colegio?</p>
+                                        </div>
+                                        <div id="pro9" style="display:none;">
+                                            <p style="ffont-size: 1.2em;" align="justify">En un almacén hay <input type="text" style="width: 30px; margin-left: 5px; margin-right: 5px; text-align: center;" id="cantidad9"> sacos de papas. ¿Cuántas decenas y unidades sueltasde sacos de papas hay en el almacén?</p>
+                                        </div>
+                                        <div id="pro10" style="display:none;">
+                                            <p style="font-size: 1.2em;" align="justify">Un granjero quiere guardar <input type="text" style="width: 30px; margin-left: 5px; margin-right: 5px; text-align: center;" id="cantidad10"> paltas en cajas. ¿Cuántas decenas y unidades sueltas de paltas tiene el granjero?</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div style="width: 100%; padding: 10px; display:none;" id="respuesta">
+                                            <p style="font-size: 1.2em;" align="center"><input type="text" style=" width: 30px; margin-left: 5px; margin-right: 5px; text-align: center;" id="decenas"> decenas y <input type="text" style="width: 30px; margin-left: 5px; margin-right: 5px; text-align: center;" id="unidades">  unidades</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="button" class="boton" value="Calcular" onclick="calcular();cero();borrar(); insertar();">
+                                    </td>
+                                </tr>
+                            </table>                     
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="bitacora">
+                    <div class="container-fluid">
+                        <div class="page-header">
+                          <h2 class="all-tittles">Rendimiento</h2>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <h3 class="text-center all-tittles">En este cuadro se puede ver el rendimiento obtenido.</h3>
+                                <div class="table-responsive">
+                                    <table  style="display: none;border: 2px solid black; width: 100%;  margin: auto;">
+                                        <tr>
+                                            <td>Ejercicios correctos</td>
+                                            <td colspan="2"><INPUT type="text"  maxlength="1"  id="correcto" name="correcto" readonly style="text-align:center; border:none"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Ejercicios incorrectos</td>
+                                            <td colspan="2"><INPUT type="text"  maxlength="1"  id="incorrecto" name="incorrecto" readonly style="text-align:center; border:none"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Ejercicios totales</td>
+                                            <td colspan="2"><INPUT type="text"  maxlength="1" id="totales" name="totales" readonly style="text-align:center; border:none"></td>
+                                        </tr>
+                                    </table>
+                                    <table style="border: 2px solid black; width: 100%; height: 100%; margin: auto;" frame="border" rules="groups" id="dataTable1">
+                                        <tr >
+                                            <td align="right" style="width: 10%;"><b>Correctos:</b></td>
+                                            <td align="center" id="ejCorrecto" style="width: 80%;"></td>
+                                            <td style="text-align:center; border: 2px solid black; border-bottom: none; background-color: #F3F781; width: 10%;"><b>Rendimiento</b></td>
+                                        </tr>
+                                        <tr>
+                                            <td align="right"><b>Incorrectos:</b></td>
+                                            <td align="center" id="ejIncorrecto"></td>
+                                            <td rowspan="2" style="text-align:center; border: 2px solid black; border-top: none; background-color: #F3F781;" id="ejRendimiento"></td>
+                                        </tr>
+                                        <tr>
+                                            <td align="right"><b>Total:</b></td>
+                                            <td align="center" id="ejtotales"></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="page-header">
+                          <h2 class="all-tittles">Resultado</h2>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <h3 class="text-center all-tittles">En este cuadro se puede ver los ejercicios realizados.</h3>
+                                <div class="table-responsive">
+                                    <table  border="0" style="width: 100%; text-align:center; margin: auto;overflow: auto;" id="dataTable">
+                                        <tr>
+                                            <td colspan="4"><hr></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Total</td>
+                                            <td>Decenas</td>
+                                            <td>Unidades</td>
+                                            <td>Resultado</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="4"><hr></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="reports">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="page-header">
+                              <h2 class="all-tittles">Informe</h2>
+                            </div><br>
+                            <div class="col-xs-12 col-sm-6 col-md-4">
+                                <div class="full-reset report-content" onclick="descargarExcel()">
+                                    <p class="text-center">
+                                        <i class="fas fa-file-excel"></i>
+                                        <i class="zmdi zmdi-file-text zmdi-hc-5x"></i>
+                                    </p>
+                                    <h3 class="text-center">Informe Excel</h3>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-4">
+                                <div class="full-reset report-content">
+                                    <p class="text-center">
+                                        <i class="zmdi zmdi-file-text zmdi-hc-5x"></i>
+                                    </p>
+                                    <h3 class="text-center" onclick="#">Informe PDF</h3>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-4">
+                                <div class="full-reset report-content">
+                                    <p class="text-center">
+                                        <i class="zmdi zmdi-email zmdi-hc-5x"></i>
+                                    </p>
+                                    <h3 class="text-center" onclick="#">Enviar por email</h3>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-4">
+                                <div class="full-reset report-content">
+                                    <p class="text-center">
+                                        <i class="zmdi zmdi-print zmdi-hc-5x"></i>
+                                    </p>
+                                    <h3 class="text-center" onclick="#">Imprimir informe</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <footer><p>&nbsp;</p></footer>
+</body>
+</html>

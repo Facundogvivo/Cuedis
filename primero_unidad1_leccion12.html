@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>CUEDIS</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="Shortcut Icon" type="image/x-icon" href="assets/icons/cuedis.ico" />
+    <script src="js/sweet-alert.min.js"></script>
+    <link rel="stylesheet" href="css/sweet-alert.css">
+    <link rel="stylesheet" href="css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" href="css/timeline.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.2.min.js"><\/script>')</script>
+    <script src="js/modernizr.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+
+        function nuevo(){
+            var lista = [1,2,3,4,5,6];
+            lista = lista.sort(function() {return Math.random() - 0.5});
+
+                document.getElementById("flor").value = lista[0] + "°";
+                document.getElementById("animal" + lista[0] ).value = "flor";
+                document.getElementById("pato").value = lista[1] + "°";
+                document.getElementById("animal" + lista[1] ).value = "pato";
+                document.getElementById("estrella").value = lista[2] + "°";
+                document.getElementById("animal" + lista[2] ).value = "estrella";
+                document.getElementById("niño").value = lista[3] + "°";
+                document.getElementById("animal" + lista[3] ).value = "niño";
+                document.getElementById("niña").value = lista[4] + "°";
+                document.getElementById("animal" + lista[4] ).value = "niña";
+                document.getElementById("gato").value = lista[5] + "°";
+                document.getElementById("animal" + lista[5] ).value = "gato";
+        }
+
+function ocultar(img){
+  owurl7 = document.getElementById(img);
+  owurl7.style.display = 'none' 
+}
+
+function mostrar(img){
+  owurl7 = document.getElementById(img);
+  owurl7.style.display = 'block' 
+}
+
+function piso1(piso){
+    document.getElementById("1Piso").value = piso;
+}
+function piso2(piso){
+    document.getElementById("2Piso").value = piso;
+}
+function piso3(piso){
+    document.getElementById("3Piso").value = piso;
+}
+function piso4(piso){
+    document.getElementById("4Piso").value = piso;
+}
+function piso5(piso){
+    document.getElementById("5Piso").value = piso;
+}
+function piso6(piso){
+    document.getElementById("6Piso").value = piso;
+}
+function resetear(){
+    mostrar('flor1'); 
+    mostrar('flor2'); 
+    mostrar('flor3'); 
+    mostrar('flor4'); 
+    mostrar('flor5'); 
+    mostrar('flor6'); 
+    mostrar('pato1'); 
+    mostrar('pato2'); 
+    mostrar('pato3'); 
+    mostrar('pato4'); 
+    mostrar('pato5'); 
+    mostrar('pato6'); 
+    mostrar('estrella1'); 
+    mostrar('estrella2'); 
+    mostrar('estrella3'); 
+    mostrar('estrella4'); 
+    mostrar('estrella5'); 
+    mostrar('estrella6'); 
+    mostrar('niño1'); 
+    mostrar('niño2'); 
+    mostrar('niño3'); 
+    mostrar('niño4'); 
+    mostrar('niño5'); 
+    mostrar('niño6'); 
+    mostrar('niña1'); 
+    mostrar('niña2'); 
+    mostrar('niña3'); 
+    mostrar('niña4'); 
+    mostrar('niña5'); 
+    mostrar('niña6'); 
+    mostrar('gato1'); 
+    mostrar('gato2'); 
+    mostrar('gato3'); 
+    mostrar('gato4'); 
+    mostrar('gato5'); 
+    mostrar('gato6'); 
+    document.getElementById("1Piso").value = "";
+    document.getElementById("2Piso").value = "";
+    document.getElementById("3Piso").value = "";
+    document.getElementById("4Piso").value = "";
+    document.getElementById("5Piso").value = "";
+    document.getElementById("6Piso").value = "";
+}
+    </script>
+    <script type="text/javascript">
+            var contador=0;
+            var correctos = 0;
+            var incorrectos = 0;
+            function calcular() {
+                var p1;
+                var p2;
+                var p3;
+                var p4;
+                var p5;
+                var p6;
+                var a1;
+                var a2;
+                var a3;
+                var a4;
+                var a5;
+                var a6;
+                var resultado;
+                p1 = document.getElementById("1Piso").value;
+                p2 = document.getElementById("2Piso").value;
+                p3 = document.getElementById("3Piso").value;
+                p4 = document.getElementById("4Piso").value;
+                p5 = document.getElementById("5Piso").value;
+                p6 = document.getElementById("6Piso").value;
+
+                a1 = document.getElementById("animal1").value;
+                a2 = document.getElementById("animal2").value;
+                a3 = document.getElementById("animal3").value;
+                a4 = document.getElementById("animal4").value;
+                a5 = document.getElementById("animal5").value;
+                a6 = document.getElementById("animal6").value;
+
+                if(p1 == a1 && p2 == a2 && p3 == a3 && p4 == a4 && p5 == a5 && p6 == a6) {
+                    resultado = "Correcto";
+                    var tr, td, tabla;
+                    tabla = document.getElementById('dataTable');
+                    tr = tabla.insertRow(tabla.rows.length);
+                    td = tr.insertCell(tr.cells.length);
+                    td.innerHTML =  a1 ;
+                    td = tr.insertCell(tr.cells.length);
+                    td.innerHTML =  a2 ;
+                    td = tr.insertCell(tr.cells.length);
+                    td.innerHTML =  a3 ;
+                    td = tr.insertCell(tr.cells.length);
+                    td.innerHTML =  a4 ;
+                    td = tr.insertCell(tr.cells.length);
+                    td.innerHTML =  a5 ;
+                    td = tr.insertCell(tr.cells.length);
+                    td.innerHTML =  a6 ;
+                    td = tr.insertCell(tr.cells.length);
+                    td.innerHTML =  resultado ;                     
+                    correcto();
+                    correctos = correctos + 1;
+                    document.getElementById('correcto').value = correctos; 
+                    incorrectos = incorrectos;
+                    document.getElementById('incorrecto').value = incorrectos; 
+                } else {
+                    resultado = "Incorrecto";
+                    var tr, td, tabla;
+                    tabla = document.getElementById('dataTable');
+                    tr = tabla.insertRow(tabla.rows.length);
+                    td = tr.insertCell(tr.cells.length);
+                    td.innerHTML =  a1 ;
+                    td = tr.insertCell(tr.cells.length);
+                    td.innerHTML =  a2 ;
+                    td = tr.insertCell(tr.cells.length);
+                    td.innerHTML =  a3 ;
+                    td = tr.insertCell(tr.cells.length);
+                    td.innerHTML =  a4 ;
+                    td = tr.insertCell(tr.cells.length);
+                    td.innerHTML =  a5 ;
+                    td = tr.insertCell(tr.cells.length);
+                    td.innerHTML =  a6 ;
+                    td = tr.insertCell(tr.cells.length);
+                    td.innerHTML =  resultado ; 
+                    incorrecto();
+                    incorrectos = incorrectos + 1;
+                    document.getElementById('incorrecto').value = incorrectos;
+                    correctos = correctos
+                    document.getElementById('correcto').value = correctos; 
+                };      
+                contador++;
+                document.getElementById("totales").value = contador;
+            }
+            function descargarExcel(){
+                //Creamos un Elemento Temporal en forma de enlace
+                var tmpElemento = document.createElement('a');
+                // obtenemos la información desde el div que lo contiene en el html
+                // Obtenemos la información de la tabla
+                var data_type = 'data:application/vnd.ms-excel';
+                var tabla_div = document.getElementById('dataTable');
+                var tabla_html = tabla_div.outerHTML.replace(/ /g, '%20');
+                tmpElemento.href = data_type + ', ' + tabla_html;
+                //Asignamos el nombre a nuestro EXCEL
+                tmpElemento.download = 'Informe - ' +  document.getElementById("titulo").value + '.xls';
+                // Simulamos el click al elemento creado para descargarlo
+                tmpElemento.click();
+            }
+            descargarExcel();
+function insertar(){
+
+document.getElementById("ejtotales").innerHTML = document.getElementById("totales").value;
+document.getElementById("ejCorrecto").innerHTML = document.getElementById("correcto").value;
+document.getElementById("ejIncorrecto").innerHTML = document.getElementById("incorrecto").value;
+var rendimiento = (parseInt(document.getElementById("correcto").value)/parseInt(document.getElementById("totales").value))*100
+document.getElementById("ejRendimiento").innerHTML =  rendimiento.toFixed() + " %";
+}
+        </script>
+</head>
+<body>
+<div clas="estadoCorrecto" id="estadoCorrecto">
+    <img src="assets/img/felicitaciones.gif" width="100%" style="border-radius: 10px;">
+</div>
+<div clas="estadoIncorrecto" id="estadoIncorrecto">
+    <img src="assets/img/Intentalo.gif" width="100%" style="border-radius: 10px;">
+</div>
+    <div class="navbar-lateral full-reset">
+<div class="visible-xs font-movile-menu mobile-menu-button"></div>
+        <div class="full-reset container-menu-movile custom-scroll-containers">
+            <div class="logo full-reset all-tittles">
+                <i class="visible-xs zmdi zmdi-close pull-left mobile-menu-button" style="line-height: 55px; cursor: pointer; padding: 0 10px; margin-left: 7px;"></i> 
+            </div>
+            <div class="full-reset" style="background-color:#CC66CC; padding: 10px 0; color:#fff;">
+                <figure>
+                    <img src="assets/img/cuedis.png" alt="Biblioteca" class="img-responsive center-box" style="width:55%;">
+                </figure>
+                <p class="text-center" style="padding-top: 15px;">Cuaderno de Ejercicios Digitales</p>
+            </div>
+            <div class="full-reset nav-lateral-list-menu">
+                <ul class="list-unstyled">
+                    <li><a href="index.html"><i class="zmdi zmdi-balance"></i>&nbsp;&nbsp; Inicio</a></li>
+                    <li><a href="cuedis.html"><i class="zmdi zmdi-more"></i>&nbsp;&nbsp; Cuedis</a></li>
+                    <li><a href="primero.html"><i class="zmdi zmdi-plus"></i></i>&nbsp;&nbsp; 1° básico</a></li>
+                    <!--<li><a href="segundo.html"><i class="zmdi zmdi-plus"></i><i class="zmdi zmdi-plus"></i></i>&nbsp;&nbsp; 2° básico</a></li>
+                    <li><a href="tercero.html"><i class="zmdi zmdi-plus"></i><i class="zmdi zmdi-plus"></i><i class="zmdi zmdi-plus"></i></i>&nbsp;&nbsp; 3° básico</a></li>
+                    <li><a href="cuarto.html"><i class="zmdi zmdi-plus"></i><i class="zmdi zmdi-plus"></i><i class="zmdi zmdi-plus"></i><i class="zmdi zmdi-plus"></i></i>&nbsp;&nbsp; 4° básico</a></li>
+                    <li><a href="quinto.html"><i class="zmdi zmdi-plus"></i><i class="zmdi zmdi-plus"></i><i class="zmdi zmdi-plus"></i><i class="zmdi zmdi-plus"></i><i class="zmdi zmdi-plus"></i>&nbsp;&nbsp; 5° básico</a></li>
+                    <li><a href="sexto.html"><i class="zmdi zmdi-plus"></i><i class="zmdi zmdi-plus"></i><i class="zmdi zmdi-plus"></i><i class="zmdi zmdi-plus"></i><i class="zmdi zmdi-plus"></i><i class="zmdi zmdi-plus"></i>&nbsp;&nbsp; 6° básico</a></li>-->
+                    <li><a href="contacto.html"><i class="zmdi zmdi-email zmdi-hc-5x"></i>&nbsp;&nbsp; Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="content-page-container full-reset custom-scroll-containers">
+        <nav class="navbar-user-top full-reset">
+            <ul class="list-unstyled full-reset">
+                <figure>
+                   <img src="assets/img/flomas.png" alt="user-picture" class="img-responsive img-circle center-box">
+                </figure>
+                <li style="color:#fff; cursor:default;">
+                    <span class="all-tittles">Estudiante</span>
+                </li>
+                <li  class="tooltips-general exit-system-button" data-href="index.html" data-placement="bottom" title="Salir del CUEDIS">
+                    <i class="zmdi zmdi-power"></i>
+                </li>
+                <li class="mobile-menu-button visible-xs" style="float: left !important;">
+                    <i class="zmdi zmdi-menu"></i>
+                </li>
+            </ul>
+        </nav>
+        <div class="container">
+            <div class="page-header">
+              <h1 class="all-tittles">Cuaderno de ejercicios digitales<small> | <a href="primero.html">Primero básico</a> | <a href="primero_unidad1.html">Unidad 1</a> | Lección 12</small></h1>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <ul class="nav nav-tabs nav-justified" role="tablist">
+                <li role="presentation" class="active" onclick="nuevo();" ><a href="#statistics" aria-controls="statistics" role="tab" data-toggle="tab">Ejercicio</a></li>
+                <li role="presentation"><a href="#bitacora" aria-controls="bitacora" role="tab" data-toggle="tab">Resultados</a></li>
+                <li role="presentation"><a href="#reports" aria-controls="reports" role="tab" data-toggle="tab">Informe</a></li>
+            </ul>
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade in active" id="statistics">                    
+                    <div class="container-fluid">
+                        <div class="page-header">
+                          <h2 class="all-tittles">Conozco los números ordinales</h2>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <h3 class="text-center all-tittles">Debe posicionar los objetos en sus pisos.</h3>
+                                <div class="table-responsive">
+                            <table border="1" style="margin: auto;text-align:center;width: 100%;max-width: 600px;">
+                                <tr>
+                                    <td style="width: 100%; padding: 10px;" colspan="8">
+                                        <input type="button" class="boton" onclick="nuevo();" value="Nuevo">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 100%; padding: 10px;" colspan="8">
+                                        <img src="assets/img/flor.png" style="width: 15%; max-width: 45px; height: 50px; border-radius: 15px;">
+                                        <img src="assets/img/pato.png" style="width: 15%; max-width: 45px; height: 50px; border-radius: 15px;">
+                                        <img src="assets/img/estrella.png" style="width: 15%; max-width: 45px; height: 50px; border-radius: 15px;">
+                                        <img src="assets/img/niño.png" style="width: 15%; max-width: 45px; height: 50px; border-radius: 15px;">
+                                        <img src="assets/img/niña.png" style="width: 15%; max-width: 45px; height: 50px; border-radius: 15px;">
+                                        <img src="assets/img/gato.png" style="width: 15%; max-width: 45px; height: 50px; border-radius: 15px;">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 100%; padding: 10px;" colspan="8">
+                                        <input type="text" class="aleatorio casilla" style="width: 15%; max-width: 45px; height: 50px; border-radius: 15px;" id="flor">
+                                        <input type="text" class="aleatorio casilla" style="width: 15%; max-width: 45px; height: 50px; border-radius: 15px;" id="pato">
+                                        <input type="text" class="aleatorio casilla" style="width: 15%; max-width: 45px; height: 50px; border-radius: 15px;" id="estrella">
+                                        <input type="text" class="aleatorio casilla" style="width: 15%; max-width: 45px; height: 50px; border-radius: 15px;" id="niño">
+                                        <input type="text" class="aleatorio casilla" style="width: 15%; max-width: 45px; height: 50px; border-radius: 15px;" id="niña">
+                                        <input type="text" class="aleatorio casilla" style="width: 15%; max-width: 45px; height: 50px; border-radius: 15px;" id="gato">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 10%; padding: 10px;">
+                                    </td>
+                                    <td style="width: 30%;">
+                                        <img src="assets/img/techo.png" width="100%" height="100%">
+                                    </td>
+                                    <td style="padding: 10px;" colspan="6">
+                                        <input type="button" class="boton" value="Resetear" onclick="resetear();" >
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>6°</td>
+                                    <td>
+                                        <img src="assets/img/piso.png" width="100%" height="100%">
+                                    </td>
+                                    <td style="width: 10%;">
+                                        <img src="assets/img/flor.png" id="flor6" style="width: 100%; max-width: 45px; height: 50px; border-radius: 15px;" onclick="ocultar('flor1'); ocultar('flor2'); ocultar('flor3'); ocultar('flor4'); ocultar('flor5'); ocultar('pato6'); ocultar('estrella6'); ocultar('niño6'); ocultar('niña6'); ocultar('gato6'); piso6('flor')">
+                                    </td>
+                                    <td style="width: 10%;">
+                                        <img src="assets/img/pato.png" id="pato6" style="width: 100%; max-width: 45px; height: 50px; border-radius: 15px;" onclick="ocultar('flor6');ocultar('pato1'); ocultar('pato2'); ocultar('pato3'); ocultar('pato4'); ocultar('pato5'); ocultar('estrella6'); ocultar('niño6'); ocultar('niña6'); ocultar('gato6'); piso6('pato')">
+                                    </td>
+                                    <td style="width: 10%;">
+                                        <img src="assets/img/estrella.png" id="estrella6" style="width: 100%; max-width: 45px; height: 50px; border-radius: 15px;" onclick="ocultar('estrella1'); ocultar('estrella2'); ocultar('estrella3'); ocultar('estrella4'); ocultar('estrella5'); ocultar('flor6'); ocultar('pato6'); ocultar('niño6'); ocultar('niña6'); ocultar('gato6'); piso6('estrella')">
+                                    </td>
+                                    <td style="width: 10%;">
+                                        <img src="assets/img/niño.png" id="niño6" style="width: 100%; max-width: 45px; height: 50px; border-radius: 15px;" onclick="ocultar('niño1'); ocultar('niño2'); ocultar('niño3'); ocultar('niño4'); ocultar('niño5'); ocultar('flor6'); ocultar('pato6'); ocultar('estrella6'); ocultar('niña6'); ocultar('gato6'); piso6('niño') ">
+                                    </td>
+                                    <td style="width: 10%;">
+                                        <img src="assets/img/niña.png" id="niña6" style="width: 100%; max-width: 45px; height: 50px; border-radius: 15px;" onclick="ocultar('niña1'); ocultar('niña2'); ocultar('niña3'); ocultar('niña4'); ocultar('niña5'); ocultar('flor6'); ocultar('pato6'); ocultar('estrella6'); ocultar('niño6'); ocultar('gato6'); piso6('niña')">
+                                    </td>
+                                    <td style="width: 10%;">
+                                        <img src="assets/img/gato.png" id="gato6" style="width: 100%; max-width: 45px; height: 50px; border-radius: 15px;" onclick="ocultar('gato1'); ocultar('gato2'); ocultar('gato3'); ocultar('gato4'); ocultar('gato5'); ocultar('flor6'); ocultar('pato6'); ocultar('estrella6'); ocultar('niño6'); ocultar('niña6'); piso6('gato')  ">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>5°</td>
+                                    <td>
+                                        <img src="assets/img/piso.png" width="100%" height="100%">
+                                    </td>
+                                    <td>
+                                        <img src="assets/img/flor.png" id="flor5" style="width: 100%; max-width: 45px; height: 50px; border-radius: 15px;" onclick="ocultar('flor1'); ocultar('flor2'); ocultar('flor3'); ocultar('flor4'); ocultar('flor6'); ocultar('pato5'); ocultar('estrella5'); ocultar('niño5'); ocultar('niña5'); ocultar('gato5');  piso5('flor')">
+                                    </td>
+                                    <td>
+                                        <img src="assets/img/pato.png" id="pato5" style="width: 100%; max-width: 45px; height: 50px; border-radius: 15px;" onclick="ocultar('flor5');ocultar('pato1'); ocultar('pato2'); ocultar('pato3'); ocultar('pato4'); ocultar('pato6');  ocultar('estrella5'); ocultar('niño5'); ocultar('niña5'); ocultar('gato5'); piso5('pato') ">
+                                    </td>
+                                    <td>
+                                        <img src="assets/img/estrella.png" id="estrella5" style="width: 100%; max-width: 45px; height: 50px; border-radius: 15px;" onclick="ocultar('estrella1'); ocultar('estrella2'); ocultar('estrella3'); ocultar('estrella4'); ocultar('estrella6');  ocultar('flor5'); ocultar('pato5'); ocultar('niño5'); ocultar('niña5'); ocultar('gato5');  piso5('estrella')">
+                                    </td>
+                                    <td>
+                                        <img src="assets/img/niño.png" id="niño5" style="width: 100%; max-width: 45px; height: 50px; border-radius: 15px;" onclick="ocultar('niño1'); ocultar('niño2'); ocultar('niño3'); ocultar('niño4'); ocultar('niño6'); ocultar('flor5'); ocultar('pato5'); ocultar('estrella5'); ocultar('niña5'); ocultar('gato5');  piso5('niño')">
+                                    </td>
+                                    <td>
+                                        <img src="assets/img/niña.png" id="niña5" style="width: 100%; max-width: 45px; height: 50px; border-radius: 15px;" onclick="ocultar('niña1'); ocultar('niña2'); ocultar('niña3'); ocultar('niña4'); ocultar('niña6'); ocultar('flor5'); ocultar('pato5'); ocultar('estrella5'); ocultar('niño5'); ocultar('gato5'); piso5('niña')">
+                                    </td>
+                                    <td>
+                                        <img src="assets/img/gato.png" id="gato5" style="width: 100%; max-width: 45px; height: 50px; border-radius: 15px;" onclick="ocultar('gato1'); ocultar('gato2'); ocultar('gato3'); ocultar('gato4'); ocultar('gato6');ocultar('flor5'); ocultar('pato5'); ocultar('estrella5'); ocultar('niño5'); ocultar('niña5'); piso5('gato')  ">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>4°</td>
+                                    <td>
+                                        <img src="assets/img/piso.png" width="100%" height="100%">
+                                    </td>
+                                    <td>
+                                        <img src="assets/img/flor.png" id="flor4" style="width: 100%; max-width: 45px; height: 50px; border-radius: 15px;" onclick="ocultar('flor1'); ocultar('flor2'); ocultar('flor3'); ocultar('flor5'); ocultar('flor6'); ocultar('pato4'); ocultar('estrella4'); ocultar('niño4'); ocultar('niña4'); ocultar('gato4'); piso4('flor')">
+                                    </td>
+                                    <td>
+                                        <img src="assets/img/pato.png" id="pato4" style="width: 100%; max-width: 45px; height: 50px; border-radius: 15px;" onclick="ocultar('flor4'); ocultar('pato1'); ocultar('pato2'); ocultar('pato3'); ocultar('pato5'); ocultar('pato6'); ocultar('estrella4'); ocultar('niño4'); ocultar('niña4'); ocultar('gato4'); piso4('pato')">
+                                    </td>
+                                    <td>
+                                        <img src="assets/img/estrella.png" id="estrella4" style="width: 100%; max-width: 45px; height: 50px; border-radius: 15px;" onclick="ocultar('estrella1'); ocultar('estrella2'); ocultar('estrella3'); ocultar('estrella5'); ocultar('estrella6');  ocultar('flor4'); ocultar('pato4'); ocultar('niño4'); ocultar('niña4'); ocultar('gato4');  piso4('estrella')">
+                                    </td>
+                                    <td>
+                                        <img src="assets/img/niño.png" id="niño4" style="width: 100%; max-width: 45px; height: 50px; border-radius: 15px;" onclick="ocultar('niño1'); ocultar('niño2'); ocultar('niño3'); ocultar('niño5'); ocultar('niño6'); ocultar('flor4'); ocultar('pato4'); ocultar('estrella4'); ocultar('niña4'); ocultar('gato4');  piso4('niño')">
+                                    </td>
+                                    <td>
+                                        <img src="assets/img/niña.png" id="niña4" style="width: 100%; max-width: 45px; height: 50px; border-radius: 15px;" onclick="ocultar('niña1'); ocultar('niña2'); ocultar('niña3'); ocultar('niña5'); ocultar('niña6'); ocultar('flor4'); ocultar('pato4'); ocultar('estrella4'); ocultar('niño4'); ocultar('gato4'); piso4('niña')">
+                                    </td>
+                                    <td>
+                                        <img src="assets/img/gato.png" id="gato4" style="width: 100%; max-width: 45px; height: 50px; border-radius: 15px;" onclick="ocultar('gato1'); ocultar('gato2'); ocultar('gato3'); ocultar('gato5'); ocultar('gato6');ocultar('flor4'); ocultar('pato4'); ocultar('estrella4'); ocultar('niño4'); ocultar('niña4'); piso4('gato')  ">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3°</td>
+                                    <td>
+                                        <img src="assets/img/piso.png" width="100%" height="100%">
+                                    </td>
+                                    <td>
+                                        <img src="assets/img/flor.png" id="flor3" style="width: 100%; max-width: 45px; height: 50px; border-radius: 15px;" onclick="ocultar('flor1'); ocultar('flor2'); ocultar('flor4'); ocultar('flor5'); ocultar('flor6'); ocultar('pato3'); ocultar('estrella3'); ocultar('niño3'); ocultar('niña3'); ocultar('gato3');  piso3('flor') ">
+                                    </td>
+                                    <td>
+                                        <img src="assets/img/pato.png" id="pato3" style="width: 100%; max-width: 45px; height: 50px; border-radius: 15px;" onclick="ocultar('flor3'); ocultar('pato1'); ocultar('pato2'); ocultar('pato4'); ocultar('pato5'); ocultar('pato6'); ocultar('estrella3'); ocultar('niño3'); ocultar('niña3'); ocultar('gato3');  piso3('pato') ">
+                                    </td>
+                                    <td>
+                                        <img src="assets/img/estrella.png" id="estrella3" style="width: 100%; max-width: 45px; height: 50px; border-radius: 15px;" onclick="ocultar('estrella1'); ocultar('estrella2'); ocultar('estrella4'); ocultar('estrella5'); ocultar('estrella6');  ocultar('flor3'); ocultar('pato3'); ocultar('niño3'); ocultar('niña3'); ocultar('gato3');  piso3('estrella')">
+                                    </td>
+                                    <td>
+                                        <img src="assets/img/niño.png" id="niño3" style="width: 100%; max-width: 45px; height: 50px; border-radius: 15px;" onclick="ocultar('niño1'); ocultar('niño2');ocultar('niño4'); ocultar('niño5'); ocultar('niño6'); ocultar('flor3'); ocultar('pato3'); ocultar('estrella3'); ocultar('niña3'); ocultar('gato3');  piso3('niño')">
+                                    </td>
+                                    <td>
+                                        <img src="assets/img/niña.png" id="niña3" style="width: 100%; max-width: 45px; height: 50px; border-radius: 15px;" onclick="ocultar('niña1'); ocultar('niña2'); ocultar('niña4'); ocultar('niña5'); ocultar('niña6'); ocultar('flor3'); ocultar('pato3'); ocultar('estrella3'); ocultar('niño3'); ocultar('gato3'); piso3('niña')">
+                                    </td>
+                                    <td>
+                                        <img src="assets/img/gato.png" id="gato3" style="width: 100%; max-width: 45px; height: 50px; border-radius: 15px;" onclick="ocultar('gato1'); ocultar('gato2'); ocultar('gato4'); ocultar('gato5'); ocultar('gato6');ocultar('flor3'); ocultar('pato3'); ocultar('estrella3'); ocultar('niño3'); ocultar('niña3'); piso3('gato')  ">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2°</td>
+                                    <td>
+                                        <img src="assets/img/piso.png" width="100%" height="100%">
+                                    </td>
+                                    <td>
+                                        <img src="assets/img/flor.png" id="flor2" style="width: 100%; max-width: 45px; height: 50px; border-radius: 15px;" onclick="ocultar('flor1');  ocultar('flor3'); ocultar('flor4'); ocultar('flor5'); ocultar('flor6'); ocultar('pato2'); ocultar('estrella2'); ocultar('niño2'); ocultar('niña2'); ocultar('gato2');  piso2('flor')">
+                                    </td>
+                                    <td>
+                                        <img src="assets/img/pato.png" id="pato2" style="width: 100%; max-width: 45px; height: 50px; border-radius: 15px;" onclick="ocultar('flor2'); ocultar('pato1'); ocultar('pato3'); ocultar('pato4'); ocultar('pato5'); ocultar('pato6'); ocultar('estrella2'); ocultar('niño2'); ocultar('niña2'); ocultar('gato2');  piso2('pato')">
+                                    </td>
+                                    <td>
+                                        <img src="assets/img/estrella.png" id="estrella2" style="width: 100%; max-width: 45px; height: 50px; border-radius: 15px;" onclick="ocultar('estrella1'); ocultar('estrella3'); ocultar('estrella4'); ocultar('estrella5'); ocultar('estrella6');  ocultar('flor2'); ocultar('pato2'); ocultar('niño2'); ocultar('niña2'); ocultar('gato2');  piso2('estrella')">
+                                    </td>
+                                    <td>
+                                        <img src="assets/img/niño.png" id="niño2" style="width: 100%; max-width: 45px; height: 50px; border-radius: 15px;" onclick="ocultar('niño1');  ocultar('niño3'); ocultar('niño4'); ocultar('niño5'); ocultar('niño6'); ocultar('flor2'); ocultar('pato2'); ocultar('estrella2'); ocultar('niña2'); ocultar('gato2');  piso2('niño')">
+                                    </td>
+                                    <td>
+                                        <img src="assets/img/niña.png" id="niña2" style="width: 100%; max-width: 45px; height: 50px; border-radius: 15px;" onclick="ocultar('niña1'); ocultar('niña3'); ocultar('niña4'); ocultar('niña5'); ocultar('niña6'); ocultar('flor2'); ocultar('pato2'); ocultar('estrella2'); ocultar('niño2'); ocultar('gato2'); piso2('niña')">
+                                    </td>
+                                    <td>
+                                        <img src="assets/img/gato.png" id="gato2" style="width: 100%; max-width: 45px; height: 50px; border-radius: 15px;" onclick="ocultar('gato1');  ocultar('gato3'); ocultar('gato4'); ocultar('gato5'); ocultar('gato6');ocultar('flor2'); ocultar('pato2'); ocultar('estrella2'); ocultar('niño2'); ocultar('niña2'); piso2('gato') ">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>1°</td>
+                                    <td>
+                                        <img src="assets/img/piso.png" width="100%" height="100%">
+                                    </td>
+                                    <td>
+                                        <img src="assets/img/flor.png" id="flor1" style="width: 100%; max-width: 45px; height: 50px; border-radius: 15px;" onclick=" ocultar('flor2'); ocultar('flor3'); ocultar('flor4'); ocultar('flor5'); ocultar('flor6'); ocultar('pato1'); ocultar('estrella1'); ocultar('niño1'); ocultar('niña1'); ocultar('gato1'); piso1('flor')">
+                                    </td>
+                                    <td>
+                                        <img src="assets/img/pato.png" id="pato1" style="width: 100%; max-width: 45px; height: 50px; border-radius: 15px;" onclick="ocultar('flor1');  ocultar('pato2'); ocultar('pato3'); ocultar('pato4'); ocultar('pato5'); ocultar('pato6'); ocultar('estrella1'); ocultar('niño1'); ocultar('niña1'); ocultar('gato1'); piso1('pato') ">
+                                    </td>
+                                    <td>
+                                        <img src="assets/img/estrella.png" id="estrella1" style="width: 100%; max-width: 45px; height: 50px; border-radius: 15px;" onclick="ocultar('estrella2'); ocultar('estrella3'); ocultar('estrella4'); ocultar('estrella5'); ocultar('estrella6');  ocultar('flor1'); ocultar('pato1'); ocultar('niño1'); ocultar('niña1'); ocultar('gato1'); piso1('estrella') ">
+                                    </td>
+                                    <td>
+                                        <img src="assets/img/niño.png" id="niño1" style="width: 100%; max-width: 45px; height: 50px; border-radius: 15px;" onclick="ocultar('niño2'); ocultar('niño3'); ocultar('niño4'); ocultar('niño5'); ocultar('niño6'); ocultar('flor1'); ocultar('pato1'); ocultar('estrella1'); ocultar('niña1'); ocultar('gato1'); piso1('niño') ">
+                                    </td>
+                                    <td>
+                                        <img src="assets/img/niña.png" id="niña1" style="width: 100%; max-width: 45px; height: 50px; border-radius: 15px;" onclick="ocultar('niña2'); ocultar('niña3'); ocultar('niña4'); ocultar('niña5'); ocultar('niña6'); ocultar('flor1'); ocultar('pato1'); ocultar('estrella1'); ocultar('niño1'); ocultar('gato1'); piso1('niña') ">
+                                    </td>
+                                    <td>
+                                        <img src="assets/img/gato.png" id="gato1" style="width: 100%; max-width: 45px; height: 50px; border-radius: 15px;" onclick=" ocultar('gato2'); ocultar('gato3'); ocultar('gato4'); ocultar('gato5'); ocultar('gato6');ocultar('flor1'); ocultar('pato1'); ocultar('estrella1'); ocultar('niño1'); ocultar('niña1'); piso1('gato') ">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>
+                                        <img src="assets/img/entrada.png" width="100%" height="100%">
+                                    </td>
+                                    <td style="width: 100%; padding: 10px;" colspan="6">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 100%; padding: 10px;" colspan="8">
+                                        <input type="button" class="boton" value="Calcular" onclick="calcular();nuevo(); insertar(); resetear();">
+                                    </td>
+                                </tr>
+                            </table>    
+                                    <input type="text" id="1Piso" style="visibility: hidden;">    
+                                    <input type="text" id="2Piso" style="visibility: hidden;">    
+                                    <input type="text" id="3Piso" style="visibility: hidden;">    
+                                    <input type="text" id="4Piso" style="visibility: hidden;">    
+                                    <input type="text" id="5Piso" style="visibility: hidden;">    
+                                    <input type="text" id="6Piso" style="visibility: hidden;">  
+                                    <br>
+                                    <input type="text" id="animal1" style="visibility: hidden;"> 
+                                    <input type="text" id="animal2" style="visibility: hidden;"> 
+                                    <input type="text" id="animal3" style="visibility: hidden;"> 
+                                    <input type="text" id="animal4" style="visibility: hidden;"> 
+                                    <input type="text" id="animal5" style="visibility: hidden;"> 
+                                    <input type="text" id="animal6" style="visibility: hidden;">                  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="bitacora">
+                    <div class="container-fluid">
+                        <div class="page-header">
+                          <h2 class="all-tittles">Rendimiento</h2>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <h3 class="text-center all-tittles">En este cuadro se puede ver el rendimiento obtenido.</h3>
+                                <div class="table-responsive">
+                                    <table  style="display: none;border: 2px solid black; width: 100%;  margin: auto;">
+                                        <tr>
+                                            <td>Ejercicios correctos</td>
+                                            <td colspan="2"><INPUT type="text"  maxlength="1"  id="correcto" name="correcto" readonly style="text-align:center; border:none"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Ejercicios incorrectos</td>
+                                            <td colspan="2"><INPUT type="text"  maxlength="1"  id="incorrecto" name="incorrecto" readonly style="text-align:center; border:none"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Ejercicios totales</td>
+                                            <td colspan="2"><INPUT type="text"  maxlength="1" id="totales" name="totales" readonly style="text-align:center; border:none"></td>
+                                        </tr>
+                                    </table>
+                                    <table style="border: 2px solid black; width: 100%; height: 100%; margin: auto;" frame="border" rules="groups" id="dataTable1">
+                                        <tr >
+                                            <td align="right" style="width: 10%;"><b>Correctos:</b></td>
+                                            <td align="center" id="ejCorrecto" style="width: 80%;"></td>
+                                            <td style="text-align:center; border: 2px solid black; border-bottom: none; background-color: #F3F781; width: 10%;"><b>Rendimiento</b></td>
+                                        </tr>
+                                        <tr>
+                                            <td align="right"><b>Incorrectos:</b></td>
+                                            <td align="center" id="ejIncorrecto"></td>
+                                            <td rowspan="2" style="text-align:center; border: 2px solid black; border-top: none; background-color: #F3F781;" id="ejRendimiento"></td>
+                                        </tr>
+                                        <tr>
+                                            <td align="right"><b>Total:</b></td>
+                                            <td align="center" id="ejtotales"></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="page-header">
+                          <h2 class="all-tittles">Resultado</h2>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <h3 class="text-center all-tittles">En este cuadro se puede ver los ejercicios realizados.</h3>
+                                <div class="table-responsive">
+                                    <table  border="0" style="width: 100%; text-align:center; margin: auto;overflow: auto;" id="dataTable">
+                                        <tr>
+                                            <td colspan="7"><hr></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Piso 1</td>
+                                            <td>Piso 2</td>
+                                            <td>Piso 3</td>
+                                            <td>Piso 4</td>
+                                            <td>Piso 5</td>
+                                            <td>Piso 6</td>
+                                            <td>Resultado</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="7"><hr></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="reports">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="page-header">
+                              <h2 class="all-tittles">Informe</h2>
+                            </div><br>
+                            <div class="col-xs-12 col-sm-6 col-md-4">
+                                <div class="full-reset report-content" onclick="descargarExcel()">
+                                    <p class="text-center">
+                                        <i class="fas fa-file-excel"></i>
+                                        <i class="zmdi zmdi-file-text zmdi-hc-5x"></i>
+                                    </p>
+                                    <h3 class="text-center">Informe Excel</h3>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-4">
+                                <div class="full-reset report-content">
+                                    <p class="text-center">
+                                        <i class="zmdi zmdi-file-text zmdi-hc-5x"></i>
+                                    </p>
+                                    <h3 class="text-center" onclick="#">Informe PDF</h3>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-4">
+                                <div class="full-reset report-content">
+                                    <p class="text-center">
+                                        <i class="zmdi zmdi-email zmdi-hc-5x"></i>
+                                    </p>
+                                    <h3 class="text-center" onclick="#">Enviar por email</h3>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-4">
+                                <div class="full-reset report-content">
+                                    <p class="text-center">
+                                        <i class="zmdi zmdi-print zmdi-hc-5x"></i>
+                                    </p>
+                                    <h3 class="text-center" onclick="#">Imprimir informe</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <footer><p>&nbsp;</p></footer>
+</body>
+</html>

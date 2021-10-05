@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>CUEDIS</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="Shortcut Icon" type="image/x-icon" href="assets/icons/cuedis.ico" />
+    <script src="js/sweet-alert.min.js"></script>
+    <link rel="stylesheet" href="css/sweet-alert.css">
+    <link rel="stylesheet" href="css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" href="css/timeline.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.2.min.js"><\/script>')</script>
+    <script src="js/modernizr.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/main.js"></script>
+    <script type="text/javascript">
+            var tipo;
+            function nuevo(){
+                tipo =  aleatorio(1,2);
+                if (tipo == 1) {
+                    mostrar('tipo1');
+                    mostrar('juntar')
+                    mostrar('botonJuntar')
+                    juntar();
+                    ocultar('tipo2');
+                    ocultar('separar');
+                    ocultar('botonSeparar');
+                document.getElementById("sumar").value = "";
+
+                } else {
+                    mostrar('tipo2');
+                    mostrar('separar')
+                    mostrar('botonSeparar')
+                    separar();
+                    ocultar('tipo1');
+                    ocultar('juntar');
+                    ocultar('botonJuntar');
+                document.getElementById("restar").value = "";
+                }
+            }
+
+            var globo;
+            var cant;
+            var cant1;
+            function juntar(){
+                globo =  aleatorio(1,10);
+                cant =  aleatorio(10,40);
+                cant1 =  aleatorio(5,cant-1);
+                document.getElementById("juntar1" + globo).value = cant;
+                document.getElementById("juntar2" + globo).value = cant1;
+                switch (globo) {
+                    case 1:
+                        mostrar('pro1juntar');
+                        ocultar('pro2juntar');
+                        ocultar('pro3juntar');
+                        ocultar('pro4juntar');
+                        ocultar('pro5juntar');
+                        ocultar('pro6juntar');
+                        ocultar('pro7juntar');
+                        ocultar('pro8juntar');
+                        ocultar('pro9juntar');
+                        ocultar('pro10juntar');
+                        mostrar('juntar');
+                        return false;
+                        break;
+                    case 2:
+                        ocultar('pro1juntar');
+                        mostrar('pro2juntar');
+                        ocultar('pro3juntar');
+                        ocultar('pro4juntar');
+                        ocultar('pro5juntar');
+                        ocultar('pro6juntar');
+                        ocultar('pro7juntar');
+                        ocultar('pro8juntar');
+                        ocultar('pro9juntar');
+                        ocultar('pro10juntar');
+                        mostrar('juntar');
+                        return false;
+                        break;
+                    case 3:
+                        ocultar('pro1juntar');
+                        ocultar('pro2juntar');
+                        mostrar('pro3juntar');
+                        ocultar('pro4juntar');
+                        ocultar('pro5juntar');
+                        ocultar('pro6juntar');
+                        ocultar('pro7juntar');
+                        ocultar('pro8juntar');
+                        ocultar('pro9juntar');
+                        ocultar('pro10juntar');
+                        mostrar('juntar');
+                        return false;
+                        break;
+                    case 4:
+                        ocultar('pro1juntar');
+                        ocultar('pro2juntar');
+                        ocultar('pro3juntar');
+                        mostrar('pro4juntar');
+                        ocultar('pro5juntar');
+                        ocultar('pro6juntar');
+                        ocultar('pro7juntar');
+                        ocultar('pro8juntar');
+                        ocultar('pro9juntar');
+                        ocultar('pro10juntar');
+                        mostrar('juntar');
+                        return false;
+                        break;
+                    case 5:
+                        ocultar('pro1juntar');
+                        ocultar('pro2juntar');
+                        ocultar('pro3juntar');
+                        ocultar('pro4juntar');
+                        mostrar('pro5juntar');
+                        ocultar('pro6juntar');
+                        ocultar('pro7juntar');
+                        ocultar('pro8juntar');
+                        ocultar('pro9juntar');
+                        ocultar('pro10juntar');
+                        mostrar('juntar');
+                        return false;
+                        break;
+                    case 6:
+                        ocultar('pro1juntar');
+                        ocultar('pro2juntar');
+                        ocultar('pro3juntar');
+                        ocultar('pro4juntar');
+                        ocultar('pro5juntar');
+                        mostrar('pro6juntar');
+                        ocultar('pro7juntar');
+                        ocultar('pro8juntar');
+                        ocultar('pro9juntar');
+                        ocultar('pro10juntar');
+                        mostrar('juntar');
+                        return false;
+                        break;
+                    case 7:
+                        ocultar('pro1juntar');
+                        ocultar('pro2juntar');
+                        ocultar('pro3juntar');
+                        ocultar('pro4juntar');
+                        ocultar('pro5juntar');
+                        ocultar('pro6juntar');
+                        mostrar('pro7juntar');
+                        ocultar('pro8juntar');
+                        ocultar('pro9juntar');
+                        ocultar('pro10juntar');
+                        mostrar('juntar');
+                        return false;
+                        break;
+                    case 8:
+                        ocultar('pro1juntar');
+                        ocultar('pro2juntar');
+                        ocultar('pro3juntar');
+                        ocultar('pro4juntar');
+                        ocultar('pro5juntar');
+                        ocultar('pro6juntar');
+                        ocultar('pro7juntar');
+                        mostrar('pro8juntar');
+                        ocultar('pro9juntar');
+                        ocultar('pro10juntar');
+                        mostrar('juntar');
+                        return false;
+                        break;
+                    case 9:
+                        ocultar('pro1juntar');
+                        ocultar('pro2juntar');
+                        ocultar('pro3juntar');
+                        ocultar('pro4juntar');
+                        ocultar('pro5juntar');
+                        ocultar('pro6juntar');
+                        ocultar('pro7juntar');
+                        ocultar('pro8juntar');
+                        mostrar('pro9juntar');
+                        ocultar('pro10juntar');
+                        mostrar('juntar');
+                        return false;
+                        break;
+                    case 10:
+                        ocultar('pro1juntar');
+                        ocultar('pro2juntar');
+                        ocultar('pro3juntar');
+                        ocultar('pro4juntar');
+                        ocultar('pro5juntar');
+                        ocultar('pro6juntar');
+                        ocultar('pro7juntar');
+                        ocultar('pro8juntar');
+                        ocultar('pro9juntar');
+                        mostrar('pro10juntar');
+                        mostrar('juntar');
+                        return false;
+                        break;
+                }
+            }
+            function separar(){
+                globo =  aleatorio(1,10);
+                cant =  aleatorio(10,40);
+                cant1 =  aleatorio(5,cant-1);
+                document.getElementById("separar1" + globo).value = cant;
+                document.getElementById("separar2" + globo).value = cant1;
+                switch (globo) {
+                    case 1:
+                        mostrar('pro1separar');
+                        ocultar('pro2separar');
+                        ocultar('pro3separar');
+                        ocultar('pro4separar');
+                        ocultar('pro5separar');
+                        ocultar('pro6separar');
+                        ocultar('pro7separar');
+                        ocultar('pro8separar');
+                        ocultar('pro9separar');
+                        ocultar('pro10separar');
+                        mostrar('separar');
+                        return false;
+                        break;
+                    case 2:
+                        ocultar('pro1separar');
+                        mostrar('pro2separar');
+                        ocultar('pro3separar');
+                        ocultar('pro4separar');
+                        ocultar('pro5separar');
+                        ocultar('pro6separar');
+                        ocultar('pro7separar');
+                        ocultar('pro8separar');
+                        ocultar('pro9separar');
+                        ocultar('pro10separar');
+                        mostrar('separar');
+                        return false;
+                        break;
+                    case 3:
+                        ocultar('pro1separar');
+                        ocultar('pro2separar');
+                        mostrar('pro3separar');
+                        ocultar('pro4separar');
+                        ocultar('pro5separar');
+                        ocultar('pro6separar');
+                        ocultar('pro7separar');
+                        ocultar('pro8separar');
+                        ocultar('pro9separar');
+                        ocultar('pro10separar');
+                        mostrar('separar');
+                        return false;
+                        break;
+                    case 4:
+                        ocultar('pro1separar');
+                        ocultar('pro2separar');
+                        ocultar('pro3separar');
+                        mostrar('pro4separar');
+                        ocultar('pro5separar');
+                        ocultar('pro6separar');
+                        ocultar('pro7separar');
+                        ocultar('pro8separar');
+                        ocultar('pro9separar');
+                        ocultar('pro10separar');
+                        mostrar('separar');
+                        return false;
+                        break;
+                    case 5:
+                        ocultar('pro1separar');
+                        ocultar('pro2separar');
+                        ocultar('pro3separar');
+                        ocultar('pro4separar');
+                        mostrar('pro5separar');
+                        ocultar('pro6separar');
+                        ocultar('pro7separar');
+                        ocultar('pro8separar');
+                        ocultar('pro9separar');
+                        ocultar('pro10separar');
+                        mostrar('separar');
+                        return false;
+                        break;
+                    case 6:
+                        ocultar('pro1separar');
+                        ocultar('pro2separar');
+                        ocultar('pro3separar');
+                        ocultar('pro4separar');
+                        ocultar('pro5separar');
+                        mostrar('pro6separar');
+                        ocultar('pro7separar');
+                        ocultar('pro8separar');
+                        ocultar('pro9separar');
+                        ocultar('pro10separar');
+                        mostrar('separar');
+                        return false;
+                        break;
+                    case 7:
+                        ocultar('pro1separar');
+                        ocultar('pro2separar');
+                        ocultar('pro3separar');
+                        ocultar('pro4separar');
+                        ocultar('pro5separar');
+                        ocultar('pro6separar');
+                        mostrar('pro7separar');
+                        ocultar('pro8separar');
+                        ocultar('pro9separar');
+                        ocultar('pro10separar');
+                        mostrar('separar');
+                        return false;
+                        break;
+                    case 8:
+                        ocultar('pro1separar');
+                        ocultar('pro2separar');
+                        ocultar('pro3separar');
+                        ocultar('pro4separar');
+                        ocultar('pro5separar');
+                        ocultar('pro6separar');
+                        ocultar('pro7separar');
+                        mostrar('pro8separar');
+                        ocultar('pro9separar');
+                        ocultar('pro10separar');
+                        mostrar('separar');
+                        return false;
+                        break;
+                    case 9:
+                        ocultar('pro1separar');
+                        ocultar('pro2separar');
+                        ocultar('pro3separar');
+                        ocultar('pro4separar');
+                        ocultar('pro5separar');
+                        ocultar('pro6separar');
+                        ocultar('pro7separar');
+                        ocultar('pro8separar');
+                        mostrar('pro9separar');
+                        ocultar('pro10separar');
+                        mostrar('separar');
+                        return false;
+                        break;
+                    case 10:
+                        ocultar('pro1separar');
+                        ocultar('pro2separar');
+                        ocultar('pro3separar');
+                        ocultar('pro4separar');
+                        ocultar('pro5separar');
+                        ocultar('pro6separar');
+                        ocultar('pro7separar');
+                        ocultar('pro8separar');
+                        ocultar('pro9separar');
+                        mostrar('pro10separar');
+                        mostrar('separar');
+                        return false;
+                        break;
+                }
+            }
+            var contador=0;
+            var correctos = 0;
+            var incorrectos = 0;
+            function calcularJuntar() {
+                var total;
+                var num1;
+                var num2;
+                var resultado;
+                total = parseInt(document.getElementById("sumar").value);
+                num1 =   parseInt(document.getElementById("juntar1" + globo).value);
+                num2 =  parseInt(document.getElementById("juntar2" + globo).value);
+                if(num1 + num2 == total) {
+                    resultado = "Correcto";
+                    var tr, td, tabla;
+                    tabla = document.getElementById('dataTable');
+                    tr = tabla.insertRow(tabla.rows.length);
+                    td = tr.insertCell(tr.cells.length);
+                    td.innerHTML =  total ;
+                    td = tr.insertCell(tr.cells.length);
+                    td.innerHTML =  num1 ;
+                    td = tr.insertCell(tr.cells.length);
+                    td.innerHTML =  num2 ;
+                    td = tr.insertCell(tr.cells.length);
+                    td.innerHTML =  resultado ;                     
+                    correcto();
+                    correctos = correctos + 1;
+                    document.getElementById('correcto').value = correctos; 
+                    incorrectos = incorrectos;
+                    document.getElementById('incorrecto').value = incorrectos; 
+                } else {
+                    resultado = "Incorrecto";
+                    var tr, td, tabla;
+                    tabla = document.getElementById('dataTable');
+                    tr = tabla.insertRow(tabla.rows.length);
+                    td = tr.insertCell(tr.cells.length);
+                    td.innerHTML =  total ;
+                    td = tr.insertCell(tr.cells.length);
+                    td.innerHTML =  dec ;
+                    td = tr.insertCell(tr.cells.length);
+                    td.innerHTML =  unid ;
+                    td = tr.insertCell(tr.cells.length);
+                    td.innerHTML =  resultado ; 
+                    incorrecto();
+                    incorrectos = incorrectos + 1;
+                    document.getElementById('incorrecto').value = incorrectos;
+                    correctos = correctos
+                    document.getElementById('correcto').value = correctos; 
+                };      
+                contador++;
+                document.getElementById("totales").value = contador;
+            }
+            function calcularSeparar() {
+                var total;
+                var num1;
+                var num2;
+                var resultado;
+                num2 = parseInt(document.getElementById("restar").value);
+                total =   parseInt(document.getElementById("separar1" + globo).value);
+                num1 =  parseInt(document.getElementById("separar2" + globo).value);
+                if(num1 + num2 == total) {
+                    resultado = "Correcto";
+                    var tr, td, tabla;
+                    tabla = document.getElementById('dataTable');
+                    tr = tabla.insertRow(tabla.rows.length);
+                    td = tr.insertCell(tr.cells.length);
+                    td.innerHTML =  total ;
+                    td = tr.insertCell(tr.cells.length);
+                    td.innerHTML =  num1 ;
+                    td = tr.insertCell(tr.cells.length);
+                    td.innerHTML =  num2 ;
+                    td = tr.insertCell(tr.cells.length);
+                    td.innerHTML =  resultado ;                     
+                    correcto();
+                    correctos = correctos + 1;
+                    document.getElementById('correcto').value = correctos; 
+                    incorrectos = incorrectos;
+                    document.getElementById('incorrecto').value = incorrectos; 
+                } else {
+                    resultado = "Incorrecto";
+                    var tr, td, tabla;
+                    tabla = document.getElementById('dataTable');
+                    tr = tabla.insertRow(tabla.rows.length);
+                    td = tr.insertCell(tr.cells.length);
+                    td.innerHTML =  total ;
+                    td = tr.insertCell(tr.cells.length);
+                    td.innerHTML =  dec ;
+                    td = tr.insertCell(tr.cells.length);
+                    td.innerHTML =  unid ;
+                    td = tr.insertCell(tr.cells.length);
+                    td.innerHTML =  resultado ; 
+                    incorrecto();
+                    incorrectos = incorrectos + 1;
+                    document.getElementById('incorrecto').value = incorrectos;
+                    correctos = correctos
+                    document.getElementById('correcto').value = correctos; 
+                };      
+                contador++;
+                document.getElementById("totales").value = contador;
+            }
+            function descargarExcel(){
+                //Creamos un Elemento Temporal en forma de enlace
+                var tmpElemento = document.createElement('a');
+                // obtenemos la información desde el div que lo contiene en el html
+                // Obtenemos la información de la tabla
+                var data_type = 'data:application/vnd.ms-excel';
+                var tabla_div = document.getElementById('dataTable');
+                var tabla_html = tabla_div.outerHTML.replace(/ /g, '%20');
+                tmpElemento.href = data_type + ', ' + tabla_html;
+                //Asignamos el nombre a nuestro EXCEL
+                tmpElemento.download = 'Informe - ' +  document.getElementById("titulo").value + '.xls';
+                // Simulamos el click al elemento creado para descargarlo
+                tmpElemento.click();
+            }
+            descargarExcel();
+function insertar(){
+
+document.getElementById("ejtotales").innerHTML = document.getElementById("totales").value;
+document.getElementById("ejCorrecto").innerHTML = document.getElementById("correcto").value;
+document.getElementById("ejIncorrecto").innerHTML = document.getElementById("incorrecto").value;
+var rendimiento = (parseInt(document.getElementById("correcto").value)/parseInt(document.getElementById("totales").value))*100
+document.getElementById("ejRendimiento").innerHTML =  rendimiento.toFixed() + " %";
+}
+        </script>
+</head>
+<body>
+<div clas="estadoCorrecto" id="estadoCorrecto">
+    <img src="assets/img/felicitaciones.gif" width="100%" style="border-radius: 10px;">
+</div>
+<div clas="estadoIncorrecto" id="estadoIncorrecto">
+    <img src="assets/img/Intentalo.gif" width="100%" style="border-radius: 10px;">
+</div>
+    <div class="navbar-lateral full-reset">
+<div class="visible-xs font-movile-menu mobile-menu-button"></div>
+        <div class="full-reset container-menu-movile custom-scroll-containers">
+            <div class="logo full-reset all-tittles">
+                <i class="visible-xs zmdi zmdi-close pull-left mobile-menu-button" style="line-height: 55px; cursor: pointer; padding: 0 10px; margin-left: 7px;"></i> 
+            </div>
+            <div class="full-reset" style="background-color:#CC66CC; padding: 10px 0; color:#fff;">
+                <figure>
+                    <img src="assets/img/cuedis.png" alt="Biblioteca" class="img-responsive center-box" style="width:55%;">
+                </figure>
+                <p class="text-center" style="padding-top: 15px;">Cuaderno de Ejercicios Digitales</p>
+            </div>
+            <div class="full-reset nav-lateral-list-menu">
+                <ul class="list-unstyled">
+                    <li><a href="index.html"><i class="zmdi zmdi-balance"></i>&nbsp;&nbsp; Inicio</a></li>
+                    <li><a href="cuedis.html"><i class="zmdi zmdi-more"></i>&nbsp;&nbsp; Cuedis</a></li>
+                    <li><a href="primero.html"><i class="zmdi zmdi-plus"></i></i>&nbsp;&nbsp; 1° básico</a></li>
+                    <!--<li><a href="segundo.html"><i class="zmdi zmdi-plus"></i><i class="zmdi zmdi-plus"></i></i>&nbsp;&nbsp; 2° básico</a></li>
+                    <li><a href="tercero.html"><i class="zmdi zmdi-plus"></i><i class="zmdi zmdi-plus"></i><i class="zmdi zmdi-plus"></i></i>&nbsp;&nbsp; 3° básico</a></li>
+                    <li><a href="cuarto.html"><i class="zmdi zmdi-plus"></i><i class="zmdi zmdi-plus"></i><i class="zmdi zmdi-plus"></i><i class="zmdi zmdi-plus"></i></i>&nbsp;&nbsp; 4° básico</a></li>
+                    <li><a href="quinto.html"><i class="zmdi zmdi-plus"></i><i class="zmdi zmdi-plus"></i><i class="zmdi zmdi-plus"></i><i class="zmdi zmdi-plus"></i><i class="zmdi zmdi-plus"></i>&nbsp;&nbsp; 5° básico</a></li>
+                    <li><a href="sexto.html"><i class="zmdi zmdi-plus"></i><i class="zmdi zmdi-plus"></i><i class="zmdi zmdi-plus"></i><i class="zmdi zmdi-plus"></i><i class="zmdi zmdi-plus"></i><i class="zmdi zmdi-plus"></i>&nbsp;&nbsp; 6° básico</a></li>-->
+                    <li><a href="contacto.html"><i class="zmdi zmdi-email zmdi-hc-5x"></i>&nbsp;&nbsp; Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="content-page-container full-reset custom-scroll-containers">
+        <nav class="navbar-user-top full-reset">
+            <ul class="list-unstyled full-reset">
+                <figure>
+                   <img src="assets/img/flomas.png" alt="user-picture" class="img-responsive img-circle center-box">
+                </figure>
+                <li style="color:#fff; cursor:default;">
+                    <span class="all-tittles">Estudiante</span>
+                </li>
+                <li  class="tooltips-general exit-system-button" data-href="index.html" data-placement="bottom" title="Salir del CUEDIS">
+                    <i class="zmdi zmdi-power"></i>
+                </li>
+                <li class="mobile-menu-button visible-xs" style="float: left !important;">
+                    <i class="zmdi zmdi-menu"></i>
+                </li>
+            </ul>
+        </nav>
+        <div class="container">
+            <div class="page-header">
+              <h1 class="all-tittles">Cuaderno de ejercicios digitales<small> | <a href="primero.html">Primero básico</a> | <a href="primero_unidad1.html">Unidad 1</a> | Lección 11</small></h1>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <ul class="nav nav-tabs nav-justified" role="tablist">
+                <li role="presentation" class="active" onclick="nuevo();" ><a href="#statistics" aria-controls="statistics" role="tab" data-toggle="tab">Ejercicio</a></li>
+                <li role="presentation"><a href="#bitacora" aria-controls="bitacora" role="tab" data-toggle="tab">Resultados</a></li>
+                <li role="presentation"><a href="#reports" aria-controls="reports" role="tab" data-toggle="tab">Informe</a></li>
+            </ul>
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade in active" id="statistics">                    
+                    <div class="container-fluid">
+                        <div class="page-header">
+                          <h2 class="all-tittles">Resuelvo problemas de juntar y separar</h2>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <h3 class="text-center all-tittles">Debe resolver problemas de juntar y separar</h3>
+                                <div class="table-responsive">                           
+                            <table border="0" style="margin: auto;text-align:center;width: 100%;">
+                                <tr>
+                                    <td style="width: 100%; padding: 10px;">
+                                        <input type="button" class="boton" onclick="nuevo();" value="Nuevo">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 100%;">
+                                        
+                                            <div id="tipo1" style="display:none;">
+                                                <!--total-->
+                                                <div id="pro1juntar">
+                                                    <p style="font-size: 1.2em;" align="justify">En un rebaño hay <input type="text" style="width: 30px; margin-left: 5px; margin-right: 5px; text-align: center;" id="juntar11"> ovejas blancas y <input type="text" style="width: 30px; margin-left: 5px; margin-right: 5px; text-align: center;" id="juntar21"> ovejas negras. ¿Cuántas ovejas hay en total en el rebaño?</p>
+                                                </div>
+                                                <!--total-->
+                                                <div id="pro2juntar">
+                                                    <p style="font-size: 1.2em;" align="justify">En una caja hay <input type="text" style="width: 30px; margin-left: 5px; margin-right: 5px; text-align: center;" id="juntar12"> bombones de chocolate blanco. Si hay <input type="text" style="width: 30px; margin-left: 5px; margin-right: 5px; text-align: center;" id="juntar22"> bombones de chocolate negro. ¿Cuántos bombones hay en la caja?</p>
+                                                </div>
+                                                <!--total-->
+                                                <div id="pro3juntar">
+                                                    <p style="font-size: 1.2em;" align="justify">Una familia se fue de vacaciones por <input type="text" style="width: 30px; margin-left: 5px; margin-right: 5px; text-align: center;" id="juntar13"> días a la playa. Despúes decidieron ir <input type="text" style="width: 30px; margin-left: 5px; margin-right: 5px; text-align: center;" id="juntar23"> días al campo ¿Cuántos días estuvieron de vacaciones?</p>
+                                                </div>
+                                                <!--total-->
+                                                <div id="pro4juntar">
+                                                    <p style="font-size: 1.2em;" align="justify">Pedró llevó <input type="text" style="width: 30px; margin-left: 5px; margin-right: 5px; text-align: center;" id="juntar14"> cartulinas de colores al taller de artes. Si ya tenía <input type="text" style="width: 30px; margin-left: 5px; margin-right: 5px; text-align: center;" id="juntar24"> cartulinas. ¿Cuántas tiene ahora en total?</p>
+                                                </div>
+                                                <!--total-->
+                                                <div id="pro5juntar">
+                                                    <p style="font-size: 1.2em;" align="justify">En una panadería hicieron <input type="text" style="width: 30px; margin-left: 5px; margin-right: 5px; text-align: center;" id="juntar15"> hallulas y <input type="text" style="width: 30px; margin-left: 5px; margin-right: 5px; text-align: center;" id="juntar25"> marraquetas. ¿Cuántos panes tienen para vender?</p>
+                                                </div>
+                                                <!--total-->
+                                                <div id="pro6juntar">
+                                                    <p style="font-size: 1.2em;" align="justify">En una carrera de autos participaron <input type="text" style="width: 30px; margin-left: 5px; margin-right: 5px; text-align: center;" id="juntar16"> corredores hombres y <input type="text" style="width: 30px; margin-left: 5px; margin-right: 5px; text-align: center;" id="juntar26"> corredores mujeres. ¿Cuántos corredores participaron en la carrera?</p>
+                                                </div>
+                                                <!--total-->
+                                                <div id="pro7juntar">
+                                                    <p style="font-size: 1.2em;" align="justify">En un autobus hay <input type="text" style="width: 30px; margin-left: 5px; margin-right: 5px; text-align: center;" id="juntar17"> personas paradas y <input type="text" style="width: 30px; margin-left: 5px; margin-right: 5px; text-align: center;" id="juntar27"> sentadas. ¿Cuántas personas hay en el autobus?</p>
+                                                </div>
+                                                <!--total-->
+                                                <div id="pro8juntar">
+                                                    <p style="font-size: 1.2em;" align="justify">Tengo <input type="text" style="width: 30px; margin-left: 5px; margin-right: 5px; text-align: center;" id="juntar18"> helados de naranja y <input type="text" style="width: 30px; margin-left: 5px; margin-right: 5px; text-align: center;" id="juntar28"> helados de limón. ¿Cuántos helados tengo en total?</p>
+                                                </div>
+                                                <!--total-->
+                                                <div id="pro9juntar">
+                                                    <p style="font-size: 1.2em;" align="justify">La mamá de Lucia compró <input type="text" style="width: 30px; margin-left: 5px; margin-right: 5px; text-align: center;" id="juntar19"> lápices rojos y en su casa tenía <input type="text" style="width: 30px; margin-left: 5px; margin-right: 5px; text-align: center;" id="juntar29"> lápices rojos. ¿cuántos lápices rojos tiene ahora?</p>
+                                                </div>
+                                                <!--total-->
+                                                <div id="pro10juntar">
+                                                    <p style="font-size: 1.2em;" align="justify">Diego jugaba a las figuritas. Tenía <input type="text" style="width: 30px; margin-left: 5px; margin-right: 5px; text-align: center;" id="juntar110"> y ganó <input type="text" style="width: 30px; margin-left: 5px; margin-right: 5px; text-align: center;" id="juntar210">. ¿Cuántas figuritas tiene ahora?</p>
+                                                </div>
+                                            </div>
+                                            <div id="tipo2" style="display:none;">
+                                                <!--resta-->
+                                                <div id="pro1separar">
+                                                    <p style="font-size: 1.2em;" align="justify">En un rebaño hay <input type="text" style="width: 30px; margin-left: 5px; margin-right: 5px; text-align: center;" id="separar11"> entre ovejas blancas y ovejas negras. Si hay <input type="text" style="width: 30px; margin-left: 5px; margin-right: 5px; text-align: center;" id="separar21"> ovejas blancas. ¿Cuántas ovejas negras hay en el rebaño?</p>
+                                                </div>
+                                                <!--resta-->
+                                                <div id="pro2separar">
+                                                    <p style="font-size: 1.2em;" align="justify">En una caja hay <input type="text" style="width: 30px; margin-left: 5px; margin-right: 5px; text-align: center;" id="separar12"> bombones de chocolate blanco y de chocolate negro. Si <input type="text" style="width: 30px; margin-left: 5px; margin-right: 5px; text-align: center;" id="separar22"> son de chocolate negro. ¿Cuántos bombones son de chocolate blanco?</p>
+                                                </div>
+                                                <!--resta-->
+                                                <div id="pro3separar">
+                                                    <p style="font-size: 1.2em;" align="justify">Una familia se fue de vacaciones por <input type="text" style="width: 30px; margin-left: 5px; margin-right: 5px; text-align: center;" id="separar13"> días. Si estuviron <input type="text" style="width: 30px; margin-left: 5px; margin-right: 5px; text-align: center;" id="separar23"> diás en la playa y el resto en el campo. ¿Cuántos días estuvieron en el campo?</p>
+                                                </div>
+                                                <!--resta-->
+                                                <div id="pro4separar">
+                                                    <p style="font-size: 1.2em;" align="justify">Pedró llevó <input type="text" style="width: 30px; margin-left: 5px; margin-right: 5px; text-align: center;" id="separar14"> cartulinas de colores al taller de artes. Se le rompieron <input type="text" style="width: 30px; margin-left: 5px; margin-right: 5px; text-align: center;" id="separar24"> cartulinas. ¿Cuántas cartulinas le quedan?</p>
+                                                </div>
+                                                <!--resta-->
+                                                <div id="pro5separar">
+                                                    <p style="font-size: 1.2em;" align="justify">En una panadería hicieron <input type="text" style="width: 30px; margin-left: 5px; margin-right: 5px; text-align: center;" id="separar15"> panes para vender. Si se han vendido <input type="text" style="width: 30px; margin-left: 5px; margin-right: 5px; text-align: center;" id="separar25"> panes. ¿Cuántos faltan por vender?</p>
+                                                </div>
+                                                <!--resta-->
+                                                <div id="pro6separar">
+                                                    <p style="font-size: 1.2em;" align="justify">En una carrera de autos participaron <input type="text" style="width: 30px; margin-left: 5px; margin-right: 5px; text-align: center;" id="separar16"> corredores. En el transcurso de la carrera <input type="text" style="width: 30px; margin-left: 5px; margin-right: 5px; text-align: center;" id="separar26"> corredores abandonaron la prueba. ¿Cuántos corredores quedaron en la carrera?</p>
+                                                </div>
+                                                <!--resta-->
+                                                <div id="pro7separar">
+                                                    <p style="font-size: 1.2em;" align="justify">En un autobus hay <input type="text" style="width: 30px; margin-left: 5px; margin-right: 5px; text-align: center;" id="separar17"> asientos. Si hay sentados <input type="text" style="width: 30px; margin-left: 5px; margin-right: 5px; text-align: center;" id="separar27">. ¿Cuántas personas más pueden sentarse?</p>
+                                                </div>
+                                                <!--resta-->
+                                                <div id="pro8separar">
+                                                    <p style="font-size: 1.2em;" align="justify">Tengo <input type="text" style="width: 30px; margin-left: 5px; margin-right: 5px; text-align: center;" id="separar18"> helados y reparto <input type="text" style="width: 30px; margin-left: 5px; margin-right: 5px; text-align: center;" id="separar28"> helados. ¿Cuántos helados me quedan?</p>
+                                                </div>
+                                                <!--resta-->
+                                                <div id="pro9separar">
+                                                    <p style="font-size: 1.2em;" align="justify">La mamá de Lucia compró <input type="text" style="width: 30px; margin-left: 5px; margin-right: 5px; text-align: center;" id="separar19"> cucuruchos, pero <input type="text" style="width: 30px; margin-left: 5px; margin-right: 5px; text-align: center;" id="separar29"> llegaron rotos. ¿Cuántos cucuruchos tiene para usar?</p>
+                                                </div>
+                                                <!--resta-->
+                                                <div id="pro10separar">
+                                                    <p style="font-size: 1.2em;" align="justify">Diego jugaba a las figuritas. Tenía <input type="text" style="width: 30px; margin-left: 5px; margin-right: 5px; text-align: center;" id="separar110"> y ahora tiene <input type="text" style="width: 30px; margin-left: 5px; margin-right: 5px; text-align: center;" id="separar210">. ¿Cuántas figuritas perdió Diego?</p>
+                                                </div>
+                                            </div>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div style="width: 100%; padding: 10px; display:none;" id="juntar">
+                                            <p style="font-size: 1.2em;" align="center">En total hay <input type="text" style=" width: 30px; margin-left: 5px; margin-right: 5px; text-align: center;" id="sumar"></p>
+                                        </div>
+                                        <div style="width: 100%; padding: 10px; display:none;" id="separar">
+                                            <p style="font-size: 1.2em;" align="center">La diferencia es <input type="text" style=" width: 30px; margin-left: 5px; margin-right: 5px; text-align: center;" id="restar"></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div style="width: 100%; padding: 10px; display:block;" id="botonJuntar">
+                                        <input type="button" class="boton" value="Calcular" onclick="calcularJuntar();nuevo(); insertar();">
+                                        </div>
+                                        <div style="width: 100%; padding: 10px; display:none;" id="botonSeparar">
+                                        <input type="button" class="boton" value="Calcular" onclick="calcularSeparar();nuevo(); insertar();">
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>                     
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="bitacora">
+                    <div class="container-fluid">
+                        <div class="page-header">
+                          <h2 class="all-tittles">Rendimiento</h2>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <h3 class="text-center all-tittles">En este cuadro se puede ver el rendimiento obtenido.</h3>
+                                <div class="table-responsive">
+                                    <table  style="display: none;border: 2px solid black; width: 100%;  margin: auto;">
+                                        <tr>
+                                            <td>Ejercicios correctos</td>
+                                            <td colspan="2"><INPUT type="text"  maxlength="1"  id="correcto" name="correcto" readonly style="text-align:center; border:none"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Ejercicios incorrectos</td>
+                                            <td colspan="2"><INPUT type="text"  maxlength="1"  id="incorrecto" name="incorrecto" readonly style="text-align:center; border:none"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Ejercicios totales</td>
+                                            <td colspan="2"><INPUT type="text"  maxlength="1" id="totales" name="totales" readonly style="text-align:center; border:none"></td>
+                                        </tr>
+                                    </table>
+                                    <table style="border: 2px solid black; width: 100%; height: 100%; margin: auto;" frame="border" rules="groups" id="dataTable1">
+                                        <tr >
+                                            <td align="right" style="width: 10%;"><b>Correctos:</b></td>
+                                            <td align="center" id="ejCorrecto" style="width: 80%;"></td>
+                                            <td style="text-align:center; border: 2px solid black; border-bottom: none; background-color: #F3F781; width: 10%;"><b>Rendimiento</b></td>
+                                        </tr>
+                                        <tr>
+                                            <td align="right"><b>Incorrectos:</b></td>
+                                            <td align="center" id="ejIncorrecto"></td>
+                                            <td rowspan="2" style="text-align:center; border: 2px solid black; border-top: none; background-color: #F3F781;" id="ejRendimiento"></td>
+                                        </tr>
+                                        <tr>
+                                            <td align="right"><b>Total:</b></td>
+                                            <td align="center" id="ejtotales"></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="page-header">
+                          <h2 class="all-tittles">Resultado</h2>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <h3 class="text-center all-tittles">En este cuadro se puede ver los ejercicios realizados.</h3>
+                                <div class="table-responsive">
+                                    <table  border="0" style="width: 100%; text-align:center; margin: auto;overflow: auto;" id="dataTable">
+                                        <tr>
+                                            <td colspan="4"><hr></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Total</td>
+                                            <td>Número 1</td>
+                                            <td>Número 2</td>
+                                            <td>Resultado</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="4"><hr></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="reports">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="page-header">
+                              <h2 class="all-tittles">Informe</h2>
+                            </div><br>
+                            <div class="col-xs-12 col-sm-6 col-md-4">
+                                <div class="full-reset report-content" onclick="descargarExcel()">
+                                    <p class="text-center">
+                                        <i class="fas fa-file-excel"></i>
+                                        <i class="zmdi zmdi-file-text zmdi-hc-5x"></i>
+                                    </p>
+                                    <h3 class="text-center">Informe Excel</h3>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-4">
+                                <div class="full-reset report-content">
+                                    <p class="text-center">
+                                        <i class="zmdi zmdi-file-text zmdi-hc-5x"></i>
+                                    </p>
+                                    <h3 class="text-center" onclick="#">Informe PDF</h3>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-4">
+                                <div class="full-reset report-content">
+                                    <p class="text-center">
+                                        <i class="zmdi zmdi-email zmdi-hc-5x"></i>
+                                    </p>
+                                    <h3 class="text-center" onclick="#">Enviar por email</h3>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-4">
+                                <div class="full-reset report-content">
+                                    <p class="text-center">
+                                        <i class="zmdi zmdi-print zmdi-hc-5x"></i>
+                                    </p>
+                                    <h3 class="text-center" onclick="#">Imprimir informe</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <footer><p>&nbsp;</p></footer>
+</body>
+</html>

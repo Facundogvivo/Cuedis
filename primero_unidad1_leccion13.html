@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>CUEDIS</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="Shortcut Icon" type="image/x-icon" href="assets/icons/cuedis.ico" />
+    <script src="js/sweet-alert.min.js"></script>
+    <link rel="stylesheet" href="css/sweet-alert.css">
+    <link rel="stylesheet" href="css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" href="css/timeline.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.2.min.js"><\/script>')</script>
+    <script src="js/modernizr.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+
+        function nuevo(){
+
+            var lista = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
+            lista = lista.sort(function() {return Math.random() - 0.5});
+
+                document.getElementById("argentina").value = lista[0];
+                document.getElementById("brasil").value = lista[1];
+                document.getElementById("chile").value = lista[2];
+                document.getElementById("colombia").value = lista[3];
+                document.getElementById("peru").value = lista[4];
+                document.getElementById("uruguay").value = lista[5];
+            var arrayNumbers = [lista[0],lista[1],lista[2],lista[3],lista[4],lista[5]]
+
+            Array.prototype.sortNumbers = function(){
+                return this.sort(
+                    function(a,b){
+                        return a - b
+                    }
+                );
+            }
+            if(arrayNumbers.sortNumbers()[0]    == document.getElementById("argentina").value)  {document.getElementById("animal1").value = "argentina"}
+            if(arrayNumbers.sortNumbers()[0]    == document.getElementById("brasil").value)     {document.getElementById("animal1").value = "brasil"}
+            if(arrayNumbers.sortNumbers()[0]    == document.getElementById("chile").value)      {document.getElementById("animal1").value = "chile"}
+            if(arrayNumbers.sortNumbers()[0]    == document.getElementById("colombia").value)   {document.getElementById("animal1").value = "colombia"}
+            if(arrayNumbers.sortNumbers()[0]    == document.getElementById("peru").value)       {document.getElementById("animal1").value = "peru"}
+            if(arrayNumbers.sortNumbers()[0]    == document.getElementById("uruguay").value)    {document.getElementById("animal1").value = "uruguay"}
+
+            if(arrayNumbers.sortNumbers()[1]    == document.getElementById("argentina").value)  {document.getElementById("animal2").value = "argentina"}
+            if(arrayNumbers.sortNumbers()[1]    == document.getElementById("brasil").value)     {document.getElementById("animal2").value = "brasil"}
+            if(arrayNumbers.sortNumbers()[1]    == document.getElementById("chile").value)      {document.getElementById("animal2").value = "chile"}
+            if(arrayNumbers.sortNumbers()[1]    == document.getElementById("colombia").value)   {document.getElementById("animal2").value = "colombia"}
+            if(arrayNumbers.sortNumbers()[1]    == document.getElementById("peru").value)       {document.getElementById("animal2").value = "peru"}
+            if(arrayNumbers.sortNumbers()[1]    == document.getElementById("uruguay").value)    {document.getElementById("animal2").value = "uruguay"}
+
+            if(arrayNumbers.sortNumbers()[2]    == document.getElementById("argentina").value)  {document.getElementById("animal3").value = "argentina"}
+            if(arrayNumbers.sortNumbers()[2]    == document.getElementById("brasil").value)     {document.getElementById("animal3").value = "brasil"}
+            if(arrayNumbers.sortNumbers()[2]    == document.getElementById("chile").value)      {document.getElementById("animal3").value = "chile"}
+            if(arrayNumbers.sortNumbers()[2]    == document.getElementById("colombia").value)   {document.getElementById("animal3").value = "colombia"}
+            if(arrayNumbers.sortNumbers()[2]    == document.getElementById("peru").value)       {document.getElementById("animal3").value = "peru"}
+            if(arrayNumbers.sortNumbers()[2]    == document.getElementById("uruguay").value)    {document.getElementById("animal3").value = "uruguay"}
+
+            if(arrayNumbers.sortNumbers()[3]    == document.getElementById("argentina").value)  {document.getElementById("animal4").value = "argentina"}
+            if(arrayNumbers.sortNumbers()[3]    == document.getElementById("brasil").value)     {document.getElementById("animal4").value = "brasil"}
+            if(arrayNumbers.sortNumbers()[3]    == document.getElementById("chile").value)      {document.getElementById("animal4").value = "chile"}
+            if(arrayNumbers.sortNumbers()[3]    == document.getElementById("colombia").value)   {document.getElementById("animal4").value = "colombia"}
+            if(arrayNumbers.sortNumbers()[3]    == document.getElementById("peru").value)       {document.getElementById("animal4").value = "peru"}
+            if(arrayNumbers.sortNumbers()[3]    == document.getElementById("uruguay").value)    {document.getElementById("animal4").value = "uruguay"}
+
+            if(arrayNumbers.sortNumbers()[4]    == document.getElementById("argentina").value)  {document.getElementById("animal5").value = "argentina"}
+            if(arrayNumbers.sortNumbers()[4]    == document.getElementById("brasil").value)     {document.getElementById("animal5").value = "brasil"}
+            if(arrayNumbers.sortNumbers()[4]    == document.getElementById("chile").value)      {document.getElementById("animal5").value = "chile"}
+            if(arrayNumbers.sortNumbers()[4]    == document.getElementById("colombia").value)   {document.getElementById("animal5").value = "colombia"}
+            if(arrayNumbers.sortNumbers()[4]    == document.getElementById("peru").value)       {document.getElementById("animal5").value = "peru"}
+            if(arrayNumbers.sortNumbers()[4]    == document.getElementById("uruguay").value)    {document.getElementById("animal5").value = "uruguay"}
+
+            if(arrayNumbers.sortNumbers()[5]    == document.getElementById("argentina").value)  {document.getElementById("animal6").value = "argentina"}
+            if(arrayNumbers.sortNumbers()[5]    == document.getElementById("brasil").value)     {document.getElementById("animal6").value = "brasil"}
+            if(arrayNumbers.sortNumbers()[5]    == document.getElementById("chile").value)      {document.getElementById("animal6").value = "chile"}
+            if(arrayNumbers.sortNumbers()[5]    == document.getElementById("colombia").value)   {document.getElementById("animal6").value = "colombia"}
+            if(arrayNumbers.sortNumbers()[5]    == document.getElementById("peru").value)       {document.getElementById("animal6").value = "peru"}
+            if(arrayNumbers.sortNumbers()[5]    == document.getElementById("uruguay").value)    {document.getElementById("animal6").value = "uruguay"}
+            
+        }
+function ocultar(img){
+  owurl7 = document.getElementById(img);
+  owurl7.style.display = 'none' 
+}
+
+function mostrar(img){
+  owurl7 = document.getElementById(img);
+  owurl7.style.display = 'block' 
+}
+
+function piso1(piso){
+    document.getElementById("1Piso").value = piso;
+}
+function piso2(piso){
+    document.getElementById("2Piso").value = piso;
+}
+function piso3(piso){
+    document.getElementById("3Piso").value = piso;
+}
+function piso4(piso){
+    document.getElementById("4Piso").value = piso;
+}
+function piso5(piso){
+    document.getElementById("5Piso").value = piso;
+}
+function piso6(piso){
+    document.getElementById("6Piso").value = piso;
+}
+function resetear(){
+    mostrar('argentina1'); 
+    mostrar('argentina2'); 
+    mostrar('argentina3'); 
+    mostrar('argentina4'); 
+    mostrar('argentina5'); 
+    mostrar('argentina6'); 
+    mostrar('brasil1'); 
+    mostrar('brasil2'); 
+    mostrar('brasil3'); 
+    mostrar('brasil4'); 
+    mostrar('brasil5'); 
+    mostrar('brasil6'); 
+    mostrar('chile1'); 
+    mostrar('chile2'); 
+    mostrar('chile3'); 
+    mostrar('chile4'); 
+    mostrar('chile5'); 
+    mostrar('chile6'); 
+    mostrar('colombia1'); 
+    mostrar('colombia2'); 
+    mostrar('colombia3'); 
+    mostrar('colombia4'); 
+    mostrar('colombia5'); 
+    mostrar('colombia6'); 
+    mostrar('peru1'); 
+    mostrar('peru2'); 
+    mostrar('peru3'); 
+    mostrar('peru4'); 
+    mostrar('peru5'); 
+    mostrar('peru6'); 
+    mostrar('uruguay1'); 
+    mostrar('uruguay2'); 
+    mostrar('uruguay3'); 
+    mostrar('uruguay4'); 
+    mostrar('uruguay5'); 
+    mostrar('uruguay6'); 
+    document.getElementById("1Piso").value = "";
+    document.getElementById("2Piso").value = "";
+    document.getElementById("3Piso").value = "";
+    document.getElementById("4Piso").value = "";
+    document.getElementById("5Piso").value = "";
+    document.getElementById("6Piso").value = "";
+}
+    </script>
+    <script type="text/javascript">
+            var contador=0;
+            var correctos = 0;
+            var incorrectos = 0;
+            function calcular() {
+                var p1;
+                var p2;
+                var p3;
+                var p4;
+                var p5;
+                var p6;
+                var a1;
+                var a2;
+                var a3;
+                var a4;
+                var a5;
+                var a6;
+                var resultado;
+                p1 = document.getElementById("1Piso").value;
+                p2 = document.getElementById("2Piso").value;
+                p3 = document.getElementById("3Piso").value;
+                p4 = document.getElementById("4Piso").value;
+                p5 = document.getElementById("5Piso").value;
+                p6 = document.getElementById("6Piso").value;
+
+                a1 = document.getElementById("animal1").value;
+                a2 = document.getElementById("animal2").value;
+                a3 = document.getElementById("animal3").value;
+                a4 = document.getElementById("animal4").value;
+                a5 = document.getElementById("animal5").value;
+                a6 = document.getElementById("animal6").value;
+
+                if(p1 == a1 && p2 == a2 && p3 == a3 && p4 == a4 && p5 == a5 && p6 == a6) {
+                    resultado = "Correcto";
+                    var tr, td, tabla;
+                    tabla = document.getElementById('dataTable');
+                    tr = tabla.insertRow(tabla.rows.length);
+                    td = tr.insertCell(tr.cells.length);
+                    td.innerHTML =  a1 ;
+                    td = tr.insertCell(tr.cells.length);
+                    td.innerHTML =  a2 ;
+                    td = tr.insertCell(tr.cells.length);
+                    td.innerHTML =  a3 ;
+                    td = tr.insertCell(tr.cells.length);
+                    td.innerHTML =  a4 ;
+                    td = tr.insertCell(tr.cells.length);
+                    td.innerHTML =  a5 ;
+                    td = tr.insertCell(tr.cells.length);
+                    td.innerHTML =  a6 ;
+                    td = tr.insertCell(tr.cells.length);
+                    td.innerHTML =  resultado ;                     
+                    correcto();
+                    correctos = correctos + 1;
+                    document.getElementById('correcto').value = correctos; 
+                    incorrectos = incorrectos;
+                    document.getElementById('incorrecto').value = incorrectos; 
+                } else {
+                    resultado = "Incorrecto";
+                    var tr, td, tabla;
+                    tabla = document.getElementById('dataTable');
+                    tr = tabla.insertRow(tabla.rows.length);
+                    td = tr.insertCell(tr.cells.length);
+                    td.innerHTML =  a1 ;
+                    td = tr.insertCell(tr.cells.length);
+                    td.innerHTML =  a2 ;
+                    td = tr.insertCell(tr.cells.length);
+                    td.innerHTML =  a3 ;
+                    td = tr.insertCell(tr.cells.length);
+                    td.innerHTML =  a4 ;
+                    td = tr.insertCell(tr.cells.length);
+                    td.innerHTML =  a5 ;
+                    td = tr.insertCell(tr.cells.length);
+                    td.innerHTML =  a6 ;
+                    td = tr.insertCell(tr.cells.length);
+                    td.innerHTML =  resultado ; 
+                    incorrecto();
+                    incorrectos = incorrectos + 1;
+                    document.getElementById('incorrecto').value = incorrectos;
+                    correctos = correctos
+                    document.getElementById('correcto').value = correctos; 
+                };      
+                contador++;
+                document.getElementById("totales").value = contador;
+            }
+            function descargarExcel(){
+                //Creamos un Elemento Temporal en forma de enlace
+                var tmpElemento = document.createElement('a');
+                // obtenemos la información desde el div que lo contiene en el html
+                // Obtenemos la información de la tabla
+                var data_type = 'data:application/vnd.ms-excel';
+                var tabla_div = document.getElementById('dataTable');
+                var tabla_html = tabla_div.outerHTML.replace(/ /g, '%20');
+                tmpElemento.href = data_type + ', ' + tabla_html;
+                //Asignamos el nombre a nuestro EXCEL
+                tmpElemento.download = 'Informe - ' +  document.getElementById("titulo").value + '.xls';
+                // Simulamos el click al elemento creado para descargarlo
+                tmpElemento.click();
+            }
+            descargarExcel();
+function insertar(){
+
+document.getElementById("ejtotales").innerHTML = document.getElementById("totales").value;
+document.getElementById("ejCorrecto").innerHTML = document.getElementById("correcto").value;
+document.getElementById("ejIncorrecto").innerHTML = document.getElementById("incorrecto").value;
+var rendimiento = (parseInt(document.getElementById("correcto").value)/parseInt(document.getElementById("totales").value))*100
+document.getElementById("ejRendimiento").innerHTML =  rendimiento.toFixed() + " %";
+}
+        </script>
+</head>
+<body>
+<div clas="estadoCorrecto" id="estadoCorrecto">
+    <img src="assets/img/felicitaciones.gif" width="100%" style="border-radius: 10px;">
+</div>
+<div clas="estadoIncorrecto" id="estadoIncorrecto">
+    <img src="assets/img/Intentalo.gif" width="100%" style="border-radius: 10px;">
+</div>
+    <div class="navbar-lateral full-reset">
+<div class="visible-xs font-movile-menu mobile-menu-button"></div>
+        <div class="full-reset container-menu-movile custom-scroll-containers">
+            <div class="logo full-reset all-tittles">
+                <i class="visible-xs zmdi zmdi-close pull-left mobile-menu-button" style="line-height: 55px; cursor: pointer; padding: 0 10px; margin-left: 7px;"></i> 
+            </div>
+            <div class="full-reset" style="background-color:#CC66CC; padding: 10px 0; color:#fff;">
+                <figure>
+                    <img src="assets/img/cuedis.png" alt="Biblioteca" class="img-responsive center-box" style="width:55%;">
+                </figure>
+                <p class="text-center" style="padding-top: 15px;">Cuaderno de Ejercicios Digitales</p>
+            </div>
+            <div class="full-reset nav-lateral-list-menu">
+                <ul class="list-unstyled">
+                    <li><a href="index.html"><i class="zmdi zmdi-balance"></i>&nbsp;&nbsp; Inicio</a></li>
+                    <li><a href="cuedis.html"><i class="zmdi zmdi-more"></i>&nbsp;&nbsp; Cuedis</a></li>
+                    <li><a href="primero.html"><i class="zmdi zmdi-plus"></i></i>&nbsp;&nbsp; 1° básico</a></li>
+                    <!--<li><a href="segundo.html"><i class="zmdi zmdi-plus"></i><i class="zmdi zmdi-plus"></i></i>&nbsp;&nbsp; 2° básico</a></li>
+                    <li><a href="tercero.html"><i class="zmdi zmdi-plus"></i><i class="zmdi zmdi-plus"></i><i class="zmdi zmdi-plus"></i></i>&nbsp;&nbsp; 3° básico</a></li>
+                    <li><a href="cuarto.html"><i class="zmdi zmdi-plus"></i><i class="zmdi zmdi-plus"></i><i class="zmdi zmdi-plus"></i><i class="zmdi zmdi-plus"></i></i>&nbsp;&nbsp; 4° básico</a></li>
+                    <li><a href="quinto.html"><i class="zmdi zmdi-plus"></i><i class="zmdi zmdi-plus"></i><i class="zmdi zmdi-plus"></i><i class="zmdi zmdi-plus"></i><i class="zmdi zmdi-plus"></i>&nbsp;&nbsp; 5° básico</a></li>
+                    <li><a href="sexto.html"><i class="zmdi zmdi-plus"></i><i class="zmdi zmdi-plus"></i><i class="zmdi zmdi-plus"></i><i class="zmdi zmdi-plus"></i><i class="zmdi zmdi-plus"></i><i class="zmdi zmdi-plus"></i>&nbsp;&nbsp; 6° básico</a></li>-->
+                    <li><a href="contacto.html"><i class="zmdi zmdi-email zmdi-hc-5x"></i>&nbsp;&nbsp; Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="content-page-container full-reset custom-scroll-containers">
+        <nav class="navbar-user-top full-reset">
+            <ul class="list-unstyled full-reset">
+                <figure>
+                   <img src="assets/img/flomas.png" alt="user-picture" class="img-responsive img-circle center-box">
+                </figure>
+                <li style="color:#fff; cursor:default;">
+                    <span class="all-tittles">Estudiante</span>
+                </li>
+                <li  class="tooltips-general exit-system-button" data-href="index.html" data-placement="bottom" title="Salir del CUEDIS">
+                    <i class="zmdi zmdi-power"></i>
+                </li>
+                <li class="mobile-menu-button visible-xs" style="float: left !important;">
+                    <i class="zmdi zmdi-menu"></i>
+                </li>
+            </ul>
+        </nav>
+        <div class="container">
+            <div class="page-header">
+              <h1 class="all-tittles">Cuaderno de ejercicios digitales<small> | <a href="primero.html">Primero básico</a> | <a href="primero_unidad1.html">Unidad 1</a> | Lección 13</small></h1>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <ul class="nav nav-tabs nav-justified" role="tablist">
+                <li role="presentation" class="active" onclick="nuevo();" ><a href="#statistics" aria-controls="statistics" role="tab" data-toggle="tab">Ejercicio</a></li>
+                <li role="presentation"><a href="#bitacora" aria-controls="bitacora" role="tab" data-toggle="tab">Resultados</a></li>
+                <li role="presentation"><a href="#reports" aria-controls="reports" role="tab" data-toggle="tab">Informe</a></li>
+            </ul>
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade in active" id="statistics">                    
+                    <div class="container-fluid">
+                        <div class="page-header">
+                          <h2 class="all-tittles">Resuelvo problemas con números ordinales</h2>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <h3 class="text-center all-tittles">Debe asignar la posición de cada país según los puntos obtenidos.</h3>
+                                <div class="table-responsive">
+                            <table border="1" style="margin: auto;text-align:center;width: 100%;max-width: 600px;">
+                                <tr>
+                                    <td style="width: 100%; padding: 10px;" colspan="8">
+                                        <input type="button" class="boton" onclick="nuevo();" value="Nuevo">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 100%; padding: 10px;" colspan="7">
+                                        <img src="assets/img/argentina.png" style="width: 45px; height: 50px; border-radius: 15px;">
+                                        <img src="assets/img/brasil.png" style="width: 45px; height: 50px; border-radius: 15px;">
+                                        <img src="assets/img/chile.png" style="width: 45px; height: 50px; border-radius: 15px;">
+                                        <img src="assets/img/colombia.png" style="width: 45px; height: 50px; border-radius: 15px;">
+                                        <img src="assets/img/peru.png" style="width: 45px; height: 50px; border-radius: 15px;">
+                                        <img src="assets/img/uruguay.png" style="width: 45px; height: 50px; border-radius: 15px;">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 100%; padding: 10px;" colspan="7">
+                                        <input type="text" class="aleatorio casilla" style="width: 45px; height: 50px; border-radius: 15px;" id="argentina">
+                                        <input type="text" class="aleatorio casilla" style="width: 45px; height: 50px; border-radius: 15px;" id="brasil">
+                                        <input type="text" class="aleatorio casilla" style="width: 45px; height: 50px; border-radius: 15px;" id="chile">
+                                        <input type="text" class="aleatorio casilla" style="width: 45px; height: 50px; border-radius: 15px;" id="colombia">
+                                        <input type="text" class="aleatorio casilla" style="width: 45px; height: 50px; border-radius: 15px;" id="peru">
+                                        <input type="text" class="aleatorio casilla" style="width: 45px; height: 50px; border-radius: 15px;" id="uruguay">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px;" colspan="7">
+                                        <input type="button" class="boton" value="Resetear" onclick="resetear();" >
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>1°</td>
+                                    <td>
+                                        <img src="assets/img/argentina.png" id="argentina1" style="width: 45px; height: 50px; border-radius: 15px;" onclick=" ocultar('argentina2'); ocultar('argentina3'); ocultar('argentina4'); ocultar('argentina5'); ocultar('argentina6'); ocultar('brasil1'); ocultar('chile1'); ocultar('colombia1'); ocultar('peru1'); ocultar('uruguay1'); piso1('argentina')">
+                                    </td>
+                                    <td>
+                                        <img src="assets/img/brasil.png" id="brasil1" style="width: 45px; height: 50px; border-radius: 15px;" onclick="ocultar('argentina1');  ocultar('brasil2'); ocultar('brasil3'); ocultar('brasil4'); ocultar('brasil5'); ocultar('brasil6'); ocultar('chile1'); ocultar('colombia1'); ocultar('peru1'); ocultar('uruguay1'); piso1('brasil') ">
+                                    </td>
+                                    <td>
+                                        <img src="assets/img/chile.png" id="chile1" style="width: 45px; height: 50px; border-radius: 15px;" onclick="ocultar('chile2'); ocultar('chile3'); ocultar('chile4'); ocultar('chile5'); ocultar('chile6');  ocultar('argentina1'); ocultar('brasil1'); ocultar('colombia1'); ocultar('peru1'); ocultar('uruguay1'); piso1('chile') ">
+                                    </td>
+                                    <td>
+                                        <img src="assets/img/colombia.png" id="colombia1" style="width: 45px; height: 50px; border-radius: 15px;" onclick="ocultar('colombia2'); ocultar('colombia3'); ocultar('colombia4'); ocultar('colombia5'); ocultar('colombia6'); ocultar('argentina1'); ocultar('brasil1'); ocultar('chile1'); ocultar('peru1'); ocultar('uruguay1'); piso1('colombia') ">
+                                    </td>
+                                    <td>
+                                        <img src="assets/img/peru.png" id="peru1" style="width: 45px; height: 50px; border-radius: 15px;" onclick="ocultar('peru2'); ocultar('peru3'); ocultar('peru4'); ocultar('peru5'); ocultar('peru6'); ocultar('argentina1'); ocultar('brasil1'); ocultar('chile1'); ocultar('colombia1'); ocultar('uruguay1'); piso1('peru') ">
+                                    </td>
+                                    <td>
+                                        <img src="assets/img/uruguay.png" id="uruguay1" style="width: 45px; height: 50px; border-radius: 15px;" onclick=" ocultar('uruguay2'); ocultar('uruguay3'); ocultar('uruguay4'); ocultar('uruguay5'); ocultar('uruguay6');ocultar('argentina1'); ocultar('brasil1'); ocultar('chile1'); ocultar('colombia1'); ocultar('peru1'); piso1('uruguay') ">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2°</td>
+                                    <td>
+                                        <img src="assets/img/argentina.png" id="argentina2" style="width: 45px; height: 50px; border-radius: 15px;" onclick="ocultar('argentina1');  ocultar('argentina3'); ocultar('argentina4'); ocultar('argentina5'); ocultar('argentina6'); ocultar('brasil2'); ocultar('chile2'); ocultar('colombia2'); ocultar('peru2'); ocultar('uruguay2');  piso2('argentina')">
+                                    </td>
+                                    <td>
+                                        <img src="assets/img/brasil.png" id="brasil2" style="width: 45px; height: 50px; border-radius: 15px;" onclick="ocultar('argentina2'); ocultar('brasil1'); ocultar('brasil3'); ocultar('brasil4'); ocultar('brasil5'); ocultar('brasil6'); ocultar('chile2'); ocultar('colombia2'); ocultar('peru2'); ocultar('uruguay2');  piso2('brasil')">
+                                    </td>
+                                    <td>
+                                        <img src="assets/img/chile.png" id="chile2" style="width: 45px; height: 50px; border-radius: 15px;" onclick="ocultar('chile1'); ocultar('chile3'); ocultar('chile4'); ocultar('chile5'); ocultar('chile6');  ocultar('argentina2'); ocultar('brasil2'); ocultar('colombia2'); ocultar('peru2'); ocultar('uruguay2');  piso2('chile')">
+                                    </td>
+                                    <td>
+                                        <img src="assets/img/colombia.png" id="colombia2" style="width: 45px; height: 50px; border-radius: 15px;" onclick="ocultar('colombia1');  ocultar('colombia3'); ocultar('colombia4'); ocultar('colombia5'); ocultar('colombia6'); ocultar('argentina2'); ocultar('brasil2'); ocultar('chile2'); ocultar('peru2'); ocultar('uruguay2');  piso2('colombia')">
+                                    </td>
+                                    <td>
+                                        <img src="assets/img/peru.png" id="peru2" style="width: 45px; height: 50px; border-radius: 15px;" onclick="ocultar('peru1'); ocultar('peru3'); ocultar('peru4'); ocultar('peru5'); ocultar('peru6'); ocultar('argentina2'); ocultar('brasil2'); ocultar('chile2'); ocultar('colombia2'); ocultar('uruguay2'); piso2('peru')">
+                                    </td>
+                                    <td>
+                                        <img src="assets/img/uruguay.png" id="uruguay2" style="width: 45px; height: 50px; border-radius: 15px;" onclick="ocultar('uruguay1');  ocultar('uruguay3'); ocultar('uruguay4'); ocultar('uruguay5'); ocultar('uruguay6');ocultar('argentina2'); ocultar('brasil2'); ocultar('chile2'); ocultar('colombia2'); ocultar('peru2'); piso2('uruguay') ">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3°</td>
+                                    <td>
+                                        <img src="assets/img/argentina.png" id="argentina3" style="width: 45px; height: 50px; border-radius: 15px;" onclick="ocultar('argentina1'); ocultar('argentina2'); ocultar('argentina4'); ocultar('argentina5'); ocultar('argentina6'); ocultar('brasil3'); ocultar('chile3'); ocultar('colombia3'); ocultar('peru3'); ocultar('uruguay3');  piso3('argentina') ">
+                                    </td>
+                                    <td>
+                                        <img src="assets/img/brasil.png" id="brasil3" style="width: 45px; height: 50px; border-radius: 15px;" onclick="ocultar('argentina3'); ocultar('brasil1'); ocultar('brasil2'); ocultar('brasil4'); ocultar('brasil5'); ocultar('brasil6'); ocultar('chile3'); ocultar('colombia3'); ocultar('peru3'); ocultar('uruguay3');  piso3('brasil') ">
+                                    </td>
+                                    <td>
+                                        <img src="assets/img/chile.png" id="chile3" style="width: 45px; height: 50px; border-radius: 15px;" onclick="ocultar('chile1'); ocultar('chile2'); ocultar('chile4'); ocultar('chile5'); ocultar('chile6');  ocultar('argentina3'); ocultar('brasil3'); ocultar('colombia3'); ocultar('peru3'); ocultar('uruguay3');  piso3('chile')">
+                                    </td>
+                                    <td>
+                                        <img src="assets/img/colombia.png" id="colombia3" style="width: 45px; height: 50px; border-radius: 15px;" onclick="ocultar('colombia1'); ocultar('colombia2');ocultar('colombia4'); ocultar('colombia5'); ocultar('colombia6'); ocultar('argentina3'); ocultar('brasil3'); ocultar('chile3'); ocultar('peru3'); ocultar('uruguay3');  piso3('colombia')">
+                                    </td>
+                                    <td>
+                                        <img src="assets/img/peru.png" id="peru3" style="width: 45px; height: 50px; border-radius: 15px;" onclick="ocultar('peru1'); ocultar('peru2'); ocultar('peru4'); ocultar('peru5'); ocultar('peru6'); ocultar('argentina3'); ocultar('brasil3'); ocultar('chile3'); ocultar('colombia3'); ocultar('uruguay3'); piso3('peru')">
+                                    </td>
+                                    <td>
+                                        <img src="assets/img/uruguay.png" id="uruguay3" style="width: 45px; height: 50px; border-radius: 15px;" onclick="ocultar('uruguay1'); ocultar('uruguay2'); ocultar('uruguay4'); ocultar('uruguay5'); ocultar('uruguay6');ocultar('argentina3'); ocultar('brasil3'); ocultar('chile3'); ocultar('colombia3'); ocultar('peru3'); piso3('uruguay')  ">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>4°</td>
+                                    <td>
+                                        <img src="assets/img/argentina.png" id="argentina4" style="width: 45px; height: 50px; border-radius: 15px;" onclick="ocultar('argentina1'); ocultar('argentina2'); ocultar('argentina3'); ocultar('argentina5'); ocultar('argentina6'); ocultar('brasil4'); ocultar('chile4'); ocultar('colombia4'); ocultar('peru4'); ocultar('uruguay4'); piso4('argentina')">
+                                    </td>
+                                    <td>
+                                        <img src="assets/img/brasil.png" id="brasil4" style="width: 45px; height: 50px; border-radius: 15px;" onclick="ocultar('argentina4'); ocultar('brasil1'); ocultar('brasil2'); ocultar('brasil3'); ocultar('brasil5'); ocultar('brasil6'); ocultar('chile4'); ocultar('colombia4'); ocultar('peru4'); ocultar('uruguay4'); piso4('brasil')">
+                                    </td>
+                                    <td>
+                                        <img src="assets/img/chile.png" id="chile4" style="width: 45px; height: 50px; border-radius: 15px;" onclick="ocultar('chile1'); ocultar('chile2'); ocultar('chile3'); ocultar('chile5'); ocultar('chile6');  ocultar('argentina4'); ocultar('brasil4'); ocultar('colombia4'); ocultar('peru4'); ocultar('uruguay4');  piso4('chile')">
+                                    </td>
+                                    <td>
+                                        <img src="assets/img/colombia.png" id="colombia4" style="width: 45px; height: 50px; border-radius: 15px;" onclick="ocultar('colombia1'); ocultar('colombia2'); ocultar('colombia3'); ocultar('colombia5'); ocultar('colombia6'); ocultar('argentina4'); ocultar('brasil4'); ocultar('chile4'); ocultar('peru4'); ocultar('uruguay4');  piso4('colombia')">
+                                    </td>
+                                    <td>
+                                        <img src="assets/img/peru.png" id="peru4" style="width: 45px; height: 50px; border-radius: 15px;" onclick="ocultar('peru1'); ocultar('peru2'); ocultar('peru3'); ocultar('peru5'); ocultar('peru6'); ocultar('argentina4'); ocultar('brasil4'); ocultar('chile4'); ocultar('colombia4'); ocultar('uruguay4'); piso4('peru')">
+                                    </td>
+                                    <td>
+                                        <img src="assets/img/uruguay.png" id="uruguay4" style="width: 45px; height: 50px; border-radius: 15px;" onclick="ocultar('uruguay1'); ocultar('uruguay2'); ocultar('uruguay3'); ocultar('uruguay5'); ocultar('uruguay6');ocultar('argentina4'); ocultar('brasil4'); ocultar('chile4'); ocultar('colombia4'); ocultar('peru4'); piso4('uruguay')  ">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>5°</td>
+                                    <td>
+                                        <img src="assets/img/argentina.png" id="argentina5" style="width: 45px; height: 50px; border-radius: 15px;" onclick="ocultar('argentina1'); ocultar('argentina2'); ocultar('argentina3'); ocultar('argentina4'); ocultar('argentina6'); ocultar('brasil5'); ocultar('chile5'); ocultar('colombia5'); ocultar('peru5'); ocultar('uruguay5');  piso5('argentina')">
+                                    </td>
+                                    <td>
+                                        <img src="assets/img/brasil.png" id="brasil5" style="width: 45px; height: 50px; border-radius: 15px;" onclick="ocultar('argentina5');ocultar('brasil1'); ocultar('brasil2'); ocultar('brasil3'); ocultar('brasil4'); ocultar('brasil6');  ocultar('chile5'); ocultar('colombia5'); ocultar('peru5'); ocultar('uruguay5'); piso5('brasil') ">
+                                    </td>
+                                    <td>
+                                        <img src="assets/img/chile.png" id="chile5" style="width: 45px; height: 50px; border-radius: 15px;" onclick="ocultar('chile1'); ocultar('chile2'); ocultar('chile3'); ocultar('chile4'); ocultar('chile6');  ocultar('argentina5'); ocultar('brasil5'); ocultar('colombia5'); ocultar('peru5'); ocultar('uruguay5');  piso5('chile')">
+                                    </td>
+                                    <td>
+                                        <img src="assets/img/colombia.png" id="colombia5" style="width: 45px; height: 50px; border-radius: 15px;" onclick="ocultar('colombia1'); ocultar('colombia2'); ocultar('colombia3'); ocultar('colombia4'); ocultar('colombia6'); ocultar('argentina5'); ocultar('brasil5'); ocultar('chile5'); ocultar('peru5'); ocultar('uruguay5');  piso5('colombia')">
+                                    </td>
+                                    <td>
+                                        <img src="assets/img/peru.png" id="peru5" style="width: 45px; height: 50px; border-radius: 15px;" onclick="ocultar('peru1'); ocultar('peru2'); ocultar('peru3'); ocultar('peru4'); ocultar('peru6'); ocultar('argentina5'); ocultar('brasil5'); ocultar('chile5'); ocultar('colombia5'); ocultar('uruguay5'); piso5('peru')">
+                                    </td>
+                                    <td>
+                                        <img src="assets/img/uruguay.png" id="uruguay5" style="width: 45px; height: 50px; border-radius: 15px;" onclick="ocultar('uruguay1'); ocultar('uruguay2'); ocultar('uruguay3'); ocultar('uruguay4'); ocultar('uruguay6');ocultar('argentina5'); ocultar('brasil5'); ocultar('chile5'); ocultar('colombia5'); ocultar('peru5'); piso5('uruguay')  ">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>6°</td>
+                                    <td style="width: 10%;">
+                                        <img src="assets/img/argentina.png" id="argentina6" style="width: 45px; height: 50px; border-radius: 15px;" onclick="ocultar('argentina1'); ocultar('argentina2'); ocultar('argentina3'); ocultar('argentina4'); ocultar('argentina5'); ocultar('brasil6'); ocultar('chile6'); ocultar('colombia6'); ocultar('peru6'); ocultar('uruguay6'); piso6('argentina')">
+                                    </td>
+                                    <td style="width: 10%;">
+                                        <img src="assets/img/brasil.png" id="brasil6" style="width: 45px; height: 50px; border-radius: 15px;" onclick="ocultar('argentina6');ocultar('brasil1'); ocultar('brasil2'); ocultar('brasil3'); ocultar('brasil4'); ocultar('brasil5'); ocultar('chile6'); ocultar('colombia6'); ocultar('peru6'); ocultar('uruguay6'); piso6('brasil')">
+                                    </td>
+                                    <td style="width: 10%;">
+                                        <img src="assets/img/chile.png" id="chile6" style="width: 45px; height: 50px; border-radius: 15px;" onclick="ocultar('chile1'); ocultar('chile2'); ocultar('chile3'); ocultar('chile4'); ocultar('chile5'); ocultar('argentina6'); ocultar('brasil6'); ocultar('colombia6'); ocultar('peru6'); ocultar('uruguay6'); piso6('chile')">
+                                    </td>
+                                    <td style="width: 10%;">
+                                        <img src="assets/img/colombia.png" id="colombia6" style="width: 45px; height: 50px; border-radius: 15px;" onclick="ocultar('colombia1'); ocultar('colombia2'); ocultar('colombia3'); ocultar('colombia4'); ocultar('colombia5'); ocultar('argentina6'); ocultar('brasil6'); ocultar('chile6'); ocultar('peru6'); ocultar('uruguay6'); piso6('colombia') ">
+                                    </td>
+                                    <td style="width: 10%;">
+                                        <img src="assets/img/peru.png" id="peru6" style="width: 45px; height: 50px; border-radius: 15px;" onclick="ocultar('peru1'); ocultar('peru2'); ocultar('peru3'); ocultar('peru4'); ocultar('peru5'); ocultar('argentina6'); ocultar('brasil6'); ocultar('chile6'); ocultar('colombia6'); ocultar('uruguay6'); piso6('peru')">
+                                    </td>
+                                    <td style="width: 10%;">
+                                        <img src="assets/img/uruguay.png" id="uruguay6" style="width: 45px; height: 50px; border-radius: 15px;" onclick="ocultar('uruguay1'); ocultar('uruguay2'); ocultar('uruguay3'); ocultar('uruguay4'); ocultar('uruguay5'); ocultar('argentina6'); ocultar('brasil6'); ocultar('chile6'); ocultar('colombia6'); ocultar('peru6'); piso6('uruguay')  ">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 100%; padding: 10px;" colspan="8">
+                                        <input type="button" class="boton" value="Calcular" onclick="calcular();nuevo(); insertar(); resetear();">
+                                    </td>
+                                </tr>
+                            </table>     
+                                    <input type="text" id="1Piso" style="visibility: hidden;">    
+                                    <input type="text" id="2Piso" style="visibility: hidden;">    
+                                    <input type="text" id="3Piso" style="visibility: hidden;">    
+                                    <input type="text" id="4Piso" style="visibility: hidden;">    
+                                    <input type="text" id="5Piso" style="visibility: hidden;">    
+                                    <input type="text" id="6Piso" style="visibility: hidden;">  
+                                    <br>
+                                    <input type="text" id="animal1" style="visibility: hidden;"> 
+                                    <input type="text" id="animal2" style="visibility: hidden;"> 
+                                    <input type="text" id="animal3" style="visibility: hidden;"> 
+                                    <input type="text" id="animal4" style="visibility: hidden;"> 
+                                    <input type="text" id="animal5" style="visibility: hidden;"> 
+                                    <input type="text" id="animal6" style="visibility: hidden;">                  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="bitacora">
+                    <div class="container-fluid">
+                        <div class="page-header">
+                          <h2 class="all-tittles">Rendimiento</h2>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <h3 class="text-center all-tittles">En este cuadro se puede ver el rendimiento obtenido.</h3>
+                                <div class="table-responsive">
+                                    <table  style="display: none;border: 2px solid black; width: 100%;  margin: auto;">
+                                        <tr>
+                                            <td>Ejercicios correctos</td>
+                                            <td colspan="2"><INPUT type="text"  maxlength="1"  id="correcto" name="correcto" readonly style="text-align:center; border:none"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Ejercicios incorrectos</td>
+                                            <td colspan="2"><INPUT type="text"  maxlength="1"  id="incorrecto" name="incorrecto" readonly style="text-align:center; border:none"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Ejercicios totales</td>
+                                            <td colspan="2"><INPUT type="text"  maxlength="1" id="totales" name="totales" readonly style="text-align:center; border:none"></td>
+                                        </tr>
+                                    </table>
+                                    <table style="border: 2px solid black; width: 100%; height: 100%; margin: auto;" frame="border" rules="groups" id="dataTable1">
+                                        <tr >
+                                            <td align="right" style="width: 10%;"><b>Correctos:</b></td>
+                                            <td align="center" id="ejCorrecto" style="width: 80%;"></td>
+                                            <td style="text-align:center; border: 2px solid black; border-bottom: none; background-color: #F3F781; width: 10%;"><b>Rendimiento</b></td>
+                                        </tr>
+                                        <tr>
+                                            <td align="right"><b>Incorrectos:</b></td>
+                                            <td align="center" id="ejIncorrecto"></td>
+                                            <td rowspan="2" style="text-align:center; border: 2px solid black; border-top: none; background-color: #F3F781;" id="ejRendimiento"></td>
+                                        </tr>
+                                        <tr>
+                                            <td align="right"><b>Total:</b></td>
+                                            <td align="center" id="ejtotales"></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="page-header">
+                          <h2 class="all-tittles">Resultado</h2>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <h3 class="text-center all-tittles">En este cuadro se puede ver los ejercicios realizados.</h3>
+                                <div class="table-responsive">
+                                    <table  border="0" style="width: 100%; text-align:center; margin: auto;overflow: auto;" id="dataTable">
+                                        <tr>
+                                            <td colspan="7"><hr></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Primero</td>
+                                            <td>Segundo</td>
+                                            <td>Tercero</td>
+                                            <td>Cuarto</td>
+                                            <td>Quinto</td>
+                                            <td>Sexto</td>
+                                            <td>Resultado</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="7"><hr></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="reports">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="page-header">
+                              <h2 class="all-tittles">Informe</h2>
+                            </div><br>
+                            <div class="col-xs-12 col-sm-6 col-md-4">
+                                <div class="full-reset report-content" onclick="descargarExcel()">
+                                    <p class="text-center">
+                                        <i class="fas fa-file-excel"></i>
+                                        <i class="zmdi zmdi-file-text zmdi-hc-5x"></i>
+                                    </p>
+                                    <h3 class="text-center">Informe Excel</h3>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-4">
+                                <div class="full-reset report-content">
+                                    <p class="text-center">
+                                        <i class="zmdi zmdi-file-text zmdi-hc-5x"></i>
+                                    </p>
+                                    <h3 class="text-center" onclick="#">Informe PDF</h3>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-4">
+                                <div class="full-reset report-content">
+                                    <p class="text-center">
+                                        <i class="zmdi zmdi-email zmdi-hc-5x"></i>
+                                    </p>
+                                    <h3 class="text-center" onclick="#">Enviar por email</h3>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-4">
+                                <div class="full-reset report-content">
+                                    <p class="text-center">
+                                        <i class="zmdi zmdi-print zmdi-hc-5x"></i>
+                                    </p>
+                                    <h3 class="text-center" onclick="#">Imprimir informe</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <footer><p>&nbsp;</p></footer>
+</body>
+</html>
