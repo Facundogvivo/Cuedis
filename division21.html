@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>CUEDIS: Cuaderno de Ejercicios Digitales</title>
+<link rel="stylesheet" href="estilo.css" type="text/css" media="screen" />
+<link rel="apple-touch-icon" sizes="60x60" href="Apple-touch-icon.png" />
+<link href="images/logo_cuedis.png" rel="icon" sizes="128x128">
+<script src="codigo.js"></script>
+<script src="codigoExcel.js"></script>
+<link rel="apple-touch-icon" sizes="57x57" href="images/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="images/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="images/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="images/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="images/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="images/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="images/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="images/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="images/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+<link rel="manifest" href="images/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="images/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<script type="text/javascript">
+function borrar() {
+
+document.f1.desarrollo1.value = document.f1.desarrollo2.value = document.f1.desarrollo3.value = document.f1.desarrollo4.value = document.f1.desarrollo5.value = document.f1.desarrollo6.value = document.f1.resultado1.value = document.f1.resultado2.value = ""
+
+}
+
+function calcula_aleatorio_formulario(){
+
+document.f1.numero11.value = aleatorio(1,9)
+document.f1.numero21.value = aleatorio(0,9)  
+
+document.f1.numero12.value = aleatorio(1,9)
+}
+
+var contador=0;
+var imagen;
+
+var correctos = 0;
+var incorrectos = 0;
+
+var numero1;
+var numero2;
+var resultado;
+var resto;
+
+function addRow(tableID) { 
+
+var seis = document.all.numero11.value; 
+var siete = document.all.numero21.value; 
+ 
+var doce = document.all.numero12.value; 
+
+var uno = document.all.desarrollo6.value; 
+
+var diecisiete 
+var dieciocho
+
+if ( document.all.resultado1.value == "" ){ 
+diecisiete = 0;
+} else {
+diecisiete = document.all.resultado1.value;
+}
+if ( document.all.resultado2.value == "" ){ 
+dieciocho = 0;
+} else {
+dieciocho = document.all.resultado2.value;
+}
+
+
+numero1 =
+parseInt(siete) + 
+parseInt(seis) * 10
+
+numero2 =
+parseInt(doce)
+
+resultado =
+parseInt(dieciocho) + 
+parseInt(diecisiete) * 10
+
+resto =
+parseInt(uno)
+
+  }
+</script>
+</head>
+<body>
+
+	<header>
+		<h1>CUEDIS</h1>
+	</header>
+	<nav>
+  <script type="text/javascript">
+      document.write(inicio)
+  </script>
+	</nav>
+	<section id="intro"></section>
+	<div id="content">
+				<article class="stream">
+					<header>
+						<h2 id="unidad">División 2 y 1</h2>
+					</header>
+						<br />
+					<section class="messages">
+			<div class="gallery">
+<FORM name=f1>
+  <div align="center">
+<INPUT onclick="calcula_aleatorio_formulario()" type="button" value="Nuevo" class="bot"><br><br>
+
+<table border="0">
+<tr height="60">
+<td width="60"><INPUT type="text"  maxlength="1" id="operacion" class="letras botones" name=numero11 readonly></td>
+<td width="60"><INPUT type="text"  maxlength="1" class="letras botones" name=numero21 readonly></td>
+<td width="60"></td>
+<td width="2" style="background-color:black;"></td>
+<td width="60"><INPUT type="text"  maxlength="1" class="letras botones" name=numero12 readonly></td>
+<td width="60"></td>
+</tr>
+<tr>
+<td colspan="3"></td>
+<td colspan="3"><hr color="black"></td>
+</tr>
+<tr height="60">
+<td width="60"><INPUT type="text"  maxlength="1" class="resultado botones" name="desarrollo1"></td>
+<td colspan="3"></td>
+<td width="60"><INPUT type="text"  maxlength="1" class="resultado botones" name="resultado1"></td>
+<td width="60"><INPUT type="text"  maxlength="1" class="resultado botones" name="resultado2"></td>
+</tr>
+<tr>
+<td colspan="1"><hr color="black"></td>
+<td colspan="5"></td>
+</tr>
+<tr height="60">
+<td width="60"><INPUT type="text"  maxlength="1" class="resultado botones" name="desarrollo2"></td>
+<td width="60"><INPUT type="text"  maxlength="1" class="resultado botones" name="desarrollo3"></td>
+<td colspan="4"></td>
+</tr>
+<tr height="60">
+<td width="60"><INPUT type="text"  maxlength="1" class="resultado botones" name="desarrollo4"></td>
+<td width="60"><INPUT type="text"  maxlength="1" class="resultado botones" name="desarrollo5"></td>
+<td colspan="4"></td>
+</tr>
+<tr>
+<td colspan="2"><hr color="black"></td>
+<td colspan="4"></td>
+</tr>
+<tr height="60">
+<td colspan="1"></td>
+<td width="60"><INPUT type="text"  maxlength="1" class="resultado botones" name="desarrollo6"></td>
+<td colspan="4"></td>
+</tr>
+</table><br>
+
+<INPUT onclick="addRow('dataTable'); formula(); insertar()"  type="button" value="Calcular" class="bot">
+</FORM>
+<br><br>
+ <div class="alto">
+
+<div id="felicitaciones" style="display:none;"><img src="images/felicitaciones.png" alt="felicitaciones" style="background-color:white" width="150" height="150"></div>
+<div id="intentalo" style="display:none;"><img src="images/Intentalo.png" alt="intentalo" style="background-color:white" width="150" height="150"></div>
+
+
+</div>
+    <br/>    <br/>
+
+<INPUT type="button" onclick="descargarExcel()" value="Informe" class="bot">
+ <br>
+ <br><table  style="display: none">
+<tr>
+<td colspan="2">Ejercicios totales</td>
+<td colspan="4"><INPUT type="text"  maxlength="1" id="totales" name="totales" readonly style="text-align:center; border:none"></td>
+</tr>
+<tr>
+<td colspan="2">Ejercicios correctos</td>
+<td colspan="4"><INPUT type="text"  maxlength="1"  id="correcto" name="correcto" readonly style="text-align:center; border:none"></td>
+</tr>
+<tr>
+<td colspan="2">Ejercicios incorrectos</td>
+<td colspan="4"><INPUT type="text"  maxlength="1"  id="incorrecto" name="incorrecto" readonly style="text-align:center; border:none"></td>
+</tr>
+</table>
+
+<TABLE id="dataTable" style="border: 2px solid black;" frame="border" rules="groups">
+<tbody>
+<tr>
+<td colspan="1" align="right"><b>Unidad:</b></td>
+<td colspan="4" align="center"><script>document.write(document.getElementById('unidad').innerHTML)</script></td>
+<td style="text-align:center; border: 2px solid black; border-bottom: none; background-color: #F3F781;"><b>Rendimiento</b></td>
+</tr>
+<tr>
+<td colspan="1" align="right"><b>Correctos:</b></td>
+<td colspan="4" align="center" id="ejCorrecto"></td>
+<td rowspan="3" style="text-align:center; border: 2px solid black; border-top: none; background-color: #F3F781;" id="ejRendimiento"></td>
+</tr>
+<tr>
+<td colspan="1" align="right"><b>Incorrectos:</b></td>
+<td colspan="4" align="center" id="ejIncorrecto"></td>
+</tr>
+<tr>
+<td colspan="1" align="right"><b>Total:</b></td>
+<td colspan="4" align="center" id="ejtotales"></td>
+</tr>
+<TR>
+ <th class="margen">Ejercicio</th>
+ <th class="margen">Dividendo</th>
+ <th class="margen">Divisor</th>
+ <th class="margen">Resto</th>
+ <th class="margen">Cociente</th>
+ <th class="margen">Correcto/Incorrecto</th>
+</TR>
+</TABLE>
+</div>
+
+					</section>
+				</article>
+				
+		</div>
+		
+		<aside>
+			<section>
+  <script type="text/javascript">
+      document.write(division)
+  </script>
+			</section>
+			
+		</aside>
+
+	<footer>
+	<script type="text/javascript">
+			document.write(facundo)
+	</script>
+	</footer>
+</body>
+</html>

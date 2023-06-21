@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>CUEDIS: Cuaderno de Ejercicios Digitales</title>
+<link rel="stylesheet" href="estilo.css" type="text/css" media="screen" />
+<link rel="apple-touch-icon" sizes="60x60" href="Apple-touch-icon.png" />
+<link href="images/logo_cuedis.png" rel="icon" sizes="128x128">
+<script src="codigo.js"></script>
+<script src="codigoExcel.js"></script>
+<link rel="apple-touch-icon" sizes="57x57" href="images/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="images/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="images/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="images/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="images/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="images/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="images/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="images/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="images/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+<link rel="manifest" href="images/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="images/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<script type="text/javascript">
+function borrar() {
+
+document.f1.reserva11.value = document.f1.reserva21.value = document.f1.reserva31.value = document.f1.reserva41.value =  document.f1.reserva12.value = document.f1.reserva22.value = document.f1.reserva32.value = document.f1.reserva42.value =  document.f1.reserva13.value = document.f1.reserva23.value = document.f1.reserva33.value = document.f1.reserva43.value = document.f1.reserva14.value = document.f1.reserva24.value = document.f1.reserva34.value = document.f1.reserva44.value = document.f1.reserva15.value = document.f1.reserva25.value = document.f1.reserva35.value = document.f1.reserva45.value = document.f1.resultado1.value = document.f1.resultado2.value = document.f1.resultado3.value = document.f1.resultado4.value = document.f1.resultado5.value = ""
+
+}
+
+function calcula_aleatorio_formulario(){
+
+document.f1.numero11.value = aleatorio(2,9)
+document.f1.numero21.value = aleatorio(0,9) 
+document.f1.numero31.value = aleatorio(0,9) 
+document.f1.numero41.value = aleatorio(0,9)
+document.f1.numero51.value = aleatorio(0,9)
+
+document.f1.numero12.value = aleatorio(1,document.f1.numero11.value-1)
+document.f1.numero22.value = aleatorio(0,9)
+document.f1.numero32.value = aleatorio(0,9)
+document.f1.numero42.value = aleatorio(0,9)
+document.f1.numero52.value = aleatorio(0,9)
+
+}
+
+var contador=0;
+var imagen;
+
+var correctos = 0;
+var incorrectos = 0;
+
+var numero1;
+var numero2;
+var resultado;
+
+function addRow(tableID) { 
+
+var seis = document.all.numero11.value; 
+var siete = document.all.numero21.value; 
+var ocho = document.all.numero31.value; 
+var nueve = document.all.numero41.value; 
+var diez = document.all.numero51.value;
+ 
+var doce = document.all.numero12.value;
+var trece = document.all.numero22.value;
+var catorce = document.all.numero32.value; 
+var quince = document.all.numero42.value;
+var dieciseis = document.all.numero52.value;
+
+var diecisiete 
+var dieciocho
+var diecinueve
+var veinte
+var veintiuno
+
+if ( document.all.resultado1.value == "" ){ 
+diecisiete = 0;
+} else {
+diecisiete = document.all.resultado1.value;
+}
+if ( document.all.resultado2.value == "" ){ 
+dieciocho = 0;
+} else {
+dieciocho = document.all.resultado2.value;
+}
+if ( document.all.resultado3.value == "" ){ 
+diecinueve = 0;
+} else {
+diecinueve = document.all.resultado3.value;
+}
+if ( document.all.resultado4.value == "" ){ 
+veinte = 0;
+} else {
+veinte = document.all.resultado4.value;
+}
+if ( document.all.resultado5.value == "" ){ 
+veintiuno = 0;
+} else {
+veintiuno = document.all.resultado5.value;
+}
+
+numero1 = 
+parseInt(diez) + 
+parseInt(nueve) * 10 + 
+parseInt(ocho) * 100 + 
+parseInt(siete) * 1000 + 
+parseInt(seis) * 10000
+
+numero2 = 
+parseInt(dieciseis) + 
+parseInt(quince) * 10 + 
+parseInt(catorce) * 100 + 
+parseInt(trece) * 1000  + 
+parseInt(doce) * 10000
+
+resultado = 
+parseInt(veintiuno) + 
+parseInt(veinte) * 10 + 
+parseInt(diecinueve) * 100 + 
+parseInt(dieciocho) * 1000 + 
+parseInt(diecisiete) * 10000
+}
+</script>
+</head>
+<body>
+
+	<header>
+		<h1>CUEDIS</h1>
+	</header>
+	<nav>
+	<script type="text/javascript">
+			document.write(inicio)
+	</script>
+	</nav>
+	<section id="intro"></section>
+	<div id="content">
+				<article class="stream">
+					<header>
+						<h2 id="unidad">Resta con Reserva 5 y 5</h2>
+					</header>
+						<br />
+					<section class="messages">
+			<div class="gallery">
+<FORM name=f1>
+  <div align="center">
+<INPUT onclick="calcula_aleatorio_formulario()" type="button" value="Nuevo" class="bot"><br><br>
+
+<table border="0">
+<tr height="30">
+<td width="60"></td>
+<td width="60"></td>
+<td width="60"><INPUT type="text"  maxlength="1" class="reserva botones" name=reserva11><INPUT type="text"  maxlength="1" class="reserva botones" name=reserva21><INPUT type="text"  maxlength="1" class="reserva botones" name=reserva31><INPUT type="text"  maxlength="1" class="reserva botones" name=reserva41>
+</td>
+<td width="60"><INPUT type="text"  maxlength="1" class="reserva botones" name=reserva12><INPUT type="text"  maxlength="1" class="reserva botones" name=reserva22><INPUT type="text"  maxlength="1" class="reserva botones" name=reserva32><INPUT type="text"  maxlength="1" class="reserva botones" name=reserva42></td>
+<td width="60"><INPUT type="text"  maxlength="1" class="reserva botones" name=reserva13><INPUT type="text"  maxlength="1" class="reserva botones" name=reserva23><INPUT type="text"  maxlength="1" class="reserva botones" name=reserva33><INPUT type="text"  maxlength="1" class="reserva botones" name=reserva43></td>
+<td width="60"><INPUT type="text"  maxlength="1" class="reserva botones" name=reserva14><INPUT type="text"  maxlength="1" class="reserva botones" name=reserva24><INPUT type="text"  maxlength="1" class="reserva botones" name=reserva34><INPUT type="text"  maxlength="1" class="reserva botones" name=reserva44></td>
+<td width="60"><INPUT type="text"  maxlength="1" class="reserva botones" name=reserva15><INPUT type="text"  maxlength="1" class="reserva botones" name=reserva25><INPUT type="text"  maxlength="1" class="reserva botones" name=reserva35><INPUT type="text"  maxlength="1" class="reserva botones" name=reserva45></td>
+</tr>
+<tr height="60">
+<td></td>
+<td></td>
+<td width="60"><INPUT type="text"  maxlength="1" class="letras botones" name=numero11 readonly></td>
+<td width="60"><INPUT type="text"  maxlength="1" class="letras botones" name=numero21 readonly></td>
+<td width="60"><INPUT type="text"  maxlength="1" class="letras botones" name=numero31 readonly></td>
+<td width="60"><INPUT type="text"  maxlength="1" class="letras botones" name=numero41 readonly></td>
+<td width="60"><INPUT type="text"  maxlength="1" class="letras botones" name=numero51 readonly></td>
+</tr>
+<tr height="60">
+<td width="60"><INPUT type="text" id="operacion" class="resultado botones" value="-" readonly></td>
+<td></td>
+<td width="60"><INPUT type="text"  maxlength="1" class="letras botones" name=numero12 readonly></td>
+<td width="60"><INPUT type="text"  maxlength="1" class="letras botones" name=numero22 readonly></td>
+<td width="60"><INPUT type="text"  maxlength="1" class="letras botones" name=numero32 readonly></td>
+<td width="60"><INPUT type="text"  maxlength="1" class="letras botones" name=numero42 readonly></td>
+<td width="60"><INPUT type="text"  maxlength="1" class="letras botones" name=numero52 readonly></td>
+</tr>
+<tr>
+<td colspan="7"><hr color="black"></td>
+</tr>
+<tr height="60">
+<td></td>
+<td></td>
+<td width="60"><INPUT type="text"  maxlength="1" class="resultado botones" name="resultado1"></td>
+<td width="60"><INPUT type="text"  maxlength="1" class="resultado botones" name="resultado2"></td>
+<td width="60"><INPUT type="text"  maxlength="1" class="resultado botones" name="resultado3"></td>
+<td width="60"><INPUT type="text"  maxlength="1" class="resultado botones" name="resultado4"></td>
+<td width="60"><INPUT type="text"  maxlength="1" class="resultado botones" name="resultado5"></td>
+</tr>
+</table><br>
+
+<INPUT onclick="addRow('dataTable'); formula(); insertar()"  type="button" value="Calcular" class="bot">
+</FORM>
+<br><br>
+ <div class="alto">
+
+<div id="felicitaciones" style="display:none;"><img src="images/felicitaciones.png" alt="felicitaciones" style="background-color:white" width="150" height="150"></div>
+<div id="intentalo" style="display:none;"><img src="images/Intentalo.png" alt="intentalo" style="background-color:white" width="150" height="150"></div>
+
+</div>
+    <br/>
+<INPUT type="button" onclick="descargarExcel()" value="Informe" class="bot">
+ <br>
+ <br>
+<table  style="display: none">
+<tr>
+<td colspan="2">Ejercicios totales</td>
+<td colspan="3"><INPUT type="text"  maxlength="1" id="totales" name="totales" readonly style="text-align:center; border:none"></td>
+</tr>
+<tr>
+<td colspan="2">Ejercicios correctos</td>
+<td colspan="3"><INPUT type="text"  maxlength="1"  id="correcto" name="correcto" readonly style="text-align:center; border:none"></td>
+</tr>
+<tr>
+<td colspan="2">Ejercicios incorrectos</td>
+<td colspan="3"><INPUT type="text"  maxlength="1"  id="incorrecto" name="incorrecto" readonly style="text-align:center; border:none"></td>
+</tr>
+</table>
+
+<TABLE id="dataTable" style="border: 2px solid black;" frame="border" rules="groups">
+<tbody>
+<tr>
+<td colspan="1" align="right"><b>Unidad:</b></td>
+<td colspan="3" align="center"><script>document.write(document.getElementById('unidad').innerHTML)</script></td>
+<td style="text-align:center; border: 2px solid black; border-bottom: none; background-color: #F3F781;"><b>Rendimiento</b></td>
+</tr>
+<tr>
+<td colspan="1" align="right"><b>Correctos:</b></td>
+<td colspan="3" align="center" id="ejCorrecto"></td>
+<td rowspan="3" style="text-align:center; border: 2px solid black; border-top: none; background-color: #F3F781;" id="ejRendimiento"></td>
+</tr>
+<tr>
+<td colspan="1" align="right"><b>Incorrectos:</b></td>
+<td colspan="3" align="center" id="ejIncorrecto"></td>
+</tr>
+<tr>
+<td colspan="1" align="right"><b>Total:</b></td>
+<td colspan="3" align="center" id="ejtotales"></td>
+</tr>
+<TR>
+ <th class="margen">Ejercicio</th>
+ <th class="margen">Minuendo</th>
+ <th class="margen">Sustraendo</th>
+ <th class="margen">Diferencia</th>
+ <th class="margen">Correcto/Incorrecto</th>
+</TR>
+</TABLE>
+</div>
+
+					</section>
+				</article>
+				
+		</div>
+		
+		<aside>
+			<section>
+	<script type="text/javascript">
+			document.write(restaConReserva)
+	</script>
+			</section>
+			
+		</aside>
+
+	<footer>
+	<script type="text/javascript">
+			document.write(facundo)
+	</script>
+	</footer>
+</body>
+</html>
